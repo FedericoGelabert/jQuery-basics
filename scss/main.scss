@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  scroll-behavior: smooth;
+}
+
+// Sections
+
+@import "./sections/header.scss";
+@import "./sections/content.scss";
+
+// Colors
+
+.redText {
+  color: rgb(246, 26, 26);
+}
+
+.blueText {
+  color: rgb(9, 133, 210);
+}
+
+.greenText {
+  color: rgb(5, 179, 5);
+}
+
+.greyText {
+  color: rgba(128, 128, 128, 0.668);
+}
+
+.redCalloutText {
+  color: rgba(246, 26, 26, 0.645);
+}
+
+.blueCalloutText {
+  color: rgba(6, 112, 179, 0.67);
+}
+
+.greenCalloutText {
+  color: rgba(4, 132, 4, 0.503);
+}
+
+.lightGreenCalloutText {
+  color: rgba(18, 231, 43, 0.986);
+}
+
+.displayNone {
+  display: none;
+}
+
+.pl30 {
+  padding-left: 30px;
+}
+
+.pl60 {
+  padding-left: 60px;
+}
+
+// Components
+
+@import "./sections/components.scss"

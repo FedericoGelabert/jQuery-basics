@@ -1,0 +1,208 @@
+
+@mixin content-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        padding: 25px 0 10px 0;
+    } 
+
+    hr {
+        height: 3px;
+        background-color: black;
+    }
+
+    &__introduction {
+        @include content-container;
+
+
+        &__text {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__install {
+        @include content-container;
+
+        p {
+            margin-top: 10px
+        }
+    }
+
+    &__basics {
+        @include content-container;
+    }
+
+    &__selectors {
+        @include content-container;
+    }
+
+    &__methods {
+        @include content-container;
+    }
+
+    &__events {
+        @include content-container;
+
+        &__display, &__display2 {
+            padding: 10px;
+
+            p {
+                text-align: center;
+                padding-top: 15px;
+                color: grey;
+            }
+        }
+
+        &__box {
+            background-color: rgba(128, 128, 128, 0.214);
+            height: 300px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            div {
+                width: 170px;
+                height: 60%;
+                background-color: red;
+            }
+        }
+
+        &__box2 {
+            background-color: rgba(128, 128, 128, 0.214);
+            height: 200px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            input {
+                padding: 10px;
+                width: 70%;
+                margin: 10px;
+            }
+            
+            div {
+                width: 170px;
+                height: 60%;
+                background-color: red;
+            }
+        }
+
+        &__buttons {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+
+            button {
+                background-color: rgba(115, 115, 115, 0.047);
+                color: rgb(0, 0, 0);
+                padding: 8px;
+                margin: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__effects {
+        @include content-container;
+
+        a {
+            color: black;
+        }
+
+        &__display, &__display2 {
+            padding: 10px;
+
+            p {
+                text-align: center;
+                padding-top: 15px;
+                color: grey;
+            }
+        }
+
+        &__box {
+            background-color: rgba(128, 128, 128, 0.214);
+            height: 300px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            div {
+                width: 170px;
+                height: 60%;
+                background-color: red;
+            }
+        }
+
+        &__box2 {
+            background-color: rgba(128, 128, 128, 0.214);
+            height: 300px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+            div {
+                width: 170px;
+                height: 60%;
+                background-color: red;
+            }
+        }
+
+        &__buttons {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+
+            button {
+                background-color: rgba(115, 115, 115, 0.047);
+                color: rgb(0, 0, 0);
+                padding: 8px;
+                margin: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    &__ajax {
+        @include content-container;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        &__desc {
+            margin-top: 20px;
+        }
+    }
+
+}
