@@ -59,6 +59,25 @@
   padding-left: 60px;
 }
 
+.selected-button {
+  border: green solid 3px;
+  background-color: greenyellow;
+}
+
+.unselected-button {
+  border: red solid 3px;
+  background-color: #f17777;
+}
+
 // Components
+
+.jc-bs3-container {
+  width: 80%;
+}
+
+.jconfirm-holder {
+  display: flex;
+  justify-content: center;
+}
 
 @import "./sections/components.scss"

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>jQuery Basics</title>
 </head>
@@ -29,7 +31,10 @@
                 <a href="#ajax">
                     <li class="header__link">Ajax</li>
                 </a>
-                <a href="#">
+                <a href="#ejercicios">
+                    <li class="header__link">Ejercicios</li>
+                </a>
+                <a href="#plugins">
                     <li class="header__link">Plugins</li>
                 </a>
             </ul>
@@ -73,16 +78,22 @@
                 <h4>Utilidades & Links</h4>
                 <ul>
                     <li>Página de jQuery: <a href="https://jquery.com/" class="redText">https://jquery.com/</a></li>
-                    <li>jQuery GitHub: <a href="https://github.com/jquery/jquery" class="redText">https://github.com/jquery/jquery</a></li>
-                    <li>Descarga / Instalación jQuery: <a href="https://jquery.com/download/" class="redText">https://jquery.com/download/</a></li>
-                    <li>Documentación jQuery: <a href="https://api.jquery.com/" class="redText">https://api.jquery.com/</a></li>
-                    <li>Plugins jQuery: <a href="https://plugins.jquery.com/" class="redText">https://plugins.jquery.com/</a></li>
+                    <li>jQuery GitHub: <a href="https://github.com/jquery/jquery"
+                            class="redText">https://github.com/jquery/jquery</a></li>
+                    <li>Descarga / Instalación jQuery: <a href="https://jquery.com/download/"
+                            class="redText">https://jquery.com/download/</a></li>
+                    <li>Documentación jQuery: <a href="https://api.jquery.com/"
+                            class="redText">https://api.jquery.com/</a></li>
+                    <li>Plugins jQuery: <a href="https://plugins.jquery.com/"
+                            class="redText">https://plugins.jquery.com/</a></li>
                 </ul>
             </div>
             <div class="list">
                 <h4>VS Code Extensión</h4>
                 <ul>
-                    <li>Extensión Snippets: <a class="redText" href="https://marketplace.visualstudio.com/items?itemName=kspearrin.jQueryCodeSnippets">jQuery Code Snippets</a></li>
+                    <li>Extensión Snippets: <a class="redText"
+                            href="https://marketplace.visualstudio.com/items?itemName=kspearrin.jQueryCodeSnippets">jQuery
+                            Code Snippets</a></li>
                 </ul>
             </div>
         </section>
@@ -219,6 +230,9 @@
                             <p><span class="redCalloutText">$</span>(<span
                                     class="greenCalloutText">"p:not(:contains(texto))"</span>)</p>
                         </div> <br>
+                        <p class="greyText">// Hidden & visible</p>
+                        <p><span class="redCalloutText">$</span>(<span class="greenCalloutText">div:hidden</span>)</p>
+                        <p><span class="redCalloutText">$</span>(<span class="greenCalloutText">div:visible</span>)</p> <br>
                         <div>
                             <p class="greyText">// Otros</p>
                             <p><span class="redCalloutText">$</span>(<span class="greenCalloutText">"ul
@@ -593,8 +607,13 @@
                         </div>
                         <div class="dimensions">
                             <h3>Dimensiones</h3>
-                            <p>Obtener las <span class="redText">dimensiones</span> de los <span
-                                    class="redText">elementos</span>.</p>
+                            <p class="dimensions__desc">Obtener las <span class="redText">dimensiones</span> de los
+                                <span class="redText">elementos</span>.
+                            </p>
+                            <div class="dimensions__example">
+                                <div class="dimensions__box"></div>
+                                <button id="btnViewDimensions">Ver dimensiones</button>
+                            </div>
                             <div class="list">
                                 <ul>
                                     <li><b>.width()</b>: el ancho de un elemento.</li>
@@ -840,12 +859,15 @@
                     <div class="example" style="padding: 10px;">
                         <div class="example__content">
                             <p><span class="redCalloutText">$</span>(selector).<span
-                                    class="redCalloutText">on</span>(<span class="greenCalloutText">'click'</span>, <span class="blueCalloutText">function</span>(){
+                                    class="redCalloutText">on</span>(<span class="greenCalloutText">'click'</span>,
+                                <span class="blueCalloutText">function</span>(){
                             </p>
-                            <p style="padding-left: 30px;"><span class="redCalloutText">$</span>(selector).<span class="redCalloutText">animate</span>({<span>'margin-left': '100px'</span></p> 
+                            <p style="padding-left: 30px;"><span class="redCalloutText">$</span>(selector).<span
+                                    class="redCalloutText">animate</span>({<span>'margin-left': '100px'</span></p>
                             <p style="padding-left: 60px;">}, 1000,</p>
                             <p style="padding-left: 30px;"><span class="blueCalloutText">function</span>() {</p>
-                            <p style="padding-left: 30px;"><span class="redCalloutText">$</span>(selector).<span class="redCalloutText">animate</span>({<span>'margin-right': '100px'</span></p> 
+                            <p style="padding-left: 30px;"><span class="redCalloutText">$</span>(selector).<span
+                                    class="redCalloutText">animate</span>({<span>'margin-right': '100px'</span></p>
                             <p style="padding-left: 60px;">}, 1000)</p>
                             <p style="padding-left: 30px;">})</p>
                             <p>});</p>
@@ -857,7 +879,8 @@
                         <span><i class="fa-solid fa-fire-flame-curved"></i></span>
                     </div>
                     <div class="callout__text">
-                        <p>Si se quiere cambiar de <span class="redText">color</span> se necesita un <a href="#plugins">PLUGIN</a>.</p>
+                        <p>Si se quiere cambiar de <span class="redText">color</span> se necesita un <a
+                                href="#plugins">PLUGIN</a>.</p>
                     </div>
                 </div>
                 <h3>Detener Animación</h3>
@@ -871,7 +894,9 @@
                     <div class="content__effects__box2">
                         <div id="effects-box2"></div>
                     </div>
-                    <p class="effects-pw">Se aplicarán 2 animaciones: 1. <b>width: 100%;</b> 2. volverá a su estado <b>original</b>.</p>
+                    <p class="effects-pw">Se aplicarán 2 animaciones: 1. <b>width: 100%;</b> 2. volverá a su estado
+                        <b>original</b>.
+                    </p>
                     <div id="effects-example2" class="displayNone">
                         <div class="example" style="padding: 5px 0 0 0;">
                             <div class="example__content">
@@ -918,10 +943,13 @@
             <h2>Ajax</h2>
             <hr>
             <div class="content__ajax__info">
-                <p class="content__ajax__desc"><b>AJAX</b> (Asynchronous JavaScript and XML) es una técnica de desarrollo web que, al combinar una serie de tecnologías
-                    independientes, nos permite <span class="redText">intercambiar información entre el servidor y el cliente</span> (un navegador web) de forma
+                <p class="content__ajax__desc"><b>AJAX</b> (Asynchronous JavaScript and XML) es una técnica de
+                    desarrollo web que, al combinar una serie de tecnologías
+                    independientes, nos permite <span class="redText">intercambiar información entre el servidor y el
+                        cliente</span> (un navegador web) de forma
                     asíncrona.</p>
-                <img src="https://res.cloudinary.com/federicog/image/upload/v1687273358/jquery-basics/js-tree_whst12.png" alt="">
+                <img src="https://res.cloudinary.com/federicog/image/upload/v1687273358/jquery-basics/js-tree_whst12.png"
+                    alt="">
                 <div class="list">
                     <ul>
                         <li><b>XMLHttpRquest</b>: Intercambio asíncrono.</li>
@@ -944,7 +972,8 @@
                     <ul>
                         <li>Tiempos de respuesta del servidor en momentos determinados.</li>
                         <li>Algunas funciones típicas del navegador pueden fallar.</li>
-                        <li>Sin jQuery se debe escribir código para cada uno de los navegadores que serán utilizados.</li>
+                        <li>Sin jQuery se debe escribir código para cada uno de los navegadores que serán utilizados.
+                        </li>
                     </ul>
                 </div>
                 <h3>Funciones</h3>
@@ -953,40 +982,56 @@
                         <li><b>$.get()</b>: Obtener un dato local (<b>.txt, .json, .xml, etc</b>) o de un servidor.</li>
                         <div class="example">
                             <div class="example__content">
-                                <p class="greyText"><b>// Data</b>: La información que se encuentre dentro del archivo/servidor.</p>
-                                <p class="greyText"><b>// textStatus</b>: El estado de el llamado (success, pending, fail).</p>
+                                <p class="greyText"><b>// Data</b>: La información que se encuentre dentro del
+                                    archivo/servidor.</p>
+                                <p class="greyText"><b>// textStatus</b>: El estado de el llamado (success, pending,
+                                    fail).</p>
                                 <p class="greyText"><b>// jqXHR</b>: Métodos y datos.</p>
                             </div>
                         </div>
                         <div class="example" style="padding-top: 0px;">
                             <div class="example__content">
-                                <p>$.<span class="redCalloutText">get</span>(<span class="greenCalloutText">"url"</span>, <span class="blueCalloutText">function</span>(<b>data, textStatus, jqXHR</b>){</p>
-                                <p class="pl30">console.<span class="redCalloutText">log</span>(<span class="greenCalloutText">"Mensaje "</span> + data + <span class="greenCalloutText">" \nStatus: "</span> + textStatus + <span class="greenCalloutText">"\njqXHR: "</span>  + jqXHR.status)</p>
+                                <p>$.<span class="redCalloutText">get</span>(<span
+                                        class="greenCalloutText">"url"</span>, <span
+                                        class="blueCalloutText">function</span>(<b>data, textStatus, jqXHR</b>){</p>
+                                <p class="pl30">console.<span class="redCalloutText">log</span>(<span
+                                        class="greenCalloutText">"Mensaje "</span> + data + <span
+                                        class="greenCalloutText">" \nStatus: "</span> + textStatus + <span
+                                        class="greenCalloutText">"\njqXHR: "</span> + jqXHR.status)</p>
                                 <p>});</p>
                             </div>
                         </div>
                         <li><b>$.getJSON()</b>: Obtiene datos convertidos a <b>.json</b>.</li>
                         <div class="example">
                             <div class="example__content">
-                                <p>$.<span class="redCalloutText">getJSON</span>(<span class="greenCalloutText">"url"</span>, <span class="blueCalloutText">function</span>(<b>data</b>){</p>
+                                <p>$.<span class="redCalloutText">getJSON</span>(<span
+                                        class="greenCalloutText">"url"</span>, <span
+                                        class="blueCalloutText">function</span>(<b>data</b>){</p>
                                 <p class="greyText pl30">// console.log(data)</p>
                                 <p>});</p>
                             </div>
                         </div>
-                        <li><b>.ajax()</b>: Siendo similar a fetch, .ajax() tiene una estructura sencilla y completa.</li>
+                        <li><b>.ajax()</b>: Siendo similar a fetch, .ajax() tiene una estructura sencilla y completa.
+                        </li>
                         <div class="example">
                             <div class="example__content">
                                 <p>$.<span class="redCalloutText">ajax</span>({</p>
-                                <p class="pl30">url: <span class="greenCalloutText">"url"</span>,</p>         
-                                <p class="pl30">type: <span class="greenCalloutText">"GET / POST / PUT / DELETE "</span>,</p>
-                                <p class="pl30">dataType: <span class="greenCalloutText">"json / xml / html / txt"</span>,</p>
-                                <p class="pl30"><span class="redCalloutText">success</span>: <span class="blueCalloutText">function</span>(<b>data</b>) {</p>
-                                <p class="pl60">console.<span class="redCalloutText">log</span>(<b>data</b>)</p> 
+                                <p class="pl30">url: <span class="greenCalloutText">"url"</span>,</p>
+                                <p class="pl30">type: <span class="greenCalloutText">"GET / POST / PUT / DELETE
+                                        "</span>,</p>
+                                <p class="pl30">dataType: <span class="greenCalloutText">"json / xml / html /
+                                        txt"</span>,</p>
+                                <p class="pl30"><span class="redCalloutText">success</span>: <span
+                                        class="blueCalloutText">function</span>(<b>data</b>) {</p>
+                                <p class="pl60">console.<span class="redCalloutText">log</span>(<b>data</b>)</p>
                                 <p class="pl30">},</p>
-                                <p class="pl30"><span class="redCalloutText">error</span>: <span class="blueCalloutText">function</span>(<b>data, status, xhr</b>) {</p>
+                                <p class="pl30"><span class="redCalloutText">error</span>: <span
+                                        class="blueCalloutText">function</span>(<b>data, status, xhr</b>) {</p>
                                 <p class="pl60">console.<span class="redCalloutText">log</span>(<b>err</b>)</p>
-                                <p class="pl60">console.<span class="redCalloutText">log</span>(<b>status</b>) <span class="greyText">// Error</span></p> 
-                                <p class="pl60">console.<span class="redCalloutText">log</span>(<b>xhr</b>) <span class="greyText">// Not Found</span></p>
+                                <p class="pl60">console.<span class="redCalloutText">log</span>(<b>status</b>) <span
+                                        class="greyText">// Error</span></p>
+                                <p class="pl60">console.<span class="redCalloutText">log</span>(<b>xhr</b>) <span
+                                        class="greyText">// Not Found</span></p>
                                 <p class="pl30">}</p>
                                 <p>});</p>
                             </div>
@@ -995,13 +1040,100 @@
                 </div>
             </div>
         </section>
+        <section class="content__ejercicios" id="ejercicios">
+            <h2>Ejercicios</h2>
+            <hr>
+            <div class="content__ejercicios__info">
+                <div class="content__ejercicios__first">
+                    <h3>Div Desplegable - Toca la flecha</h3>
+                    <p>Pon en práctica lo aprendido y trata de realizar este ejercicio sin observar el código. Si no
+                        puedes realizarlo con éxito, no te preocupes. Siempre que quieras puedes ver el código.</p>
+                    <div class="content__ejercicios__arrow">
+                        <div class="arrowDownUp">
+                            <img class="arrowDown"
+                                src="https://res.cloudinary.com/federicog/image/upload/v1687290987/jquery-basics/downArrow_q5xrar.png"
+                                alt="Down Arrow">
+                            <img class="arrowUp"
+                                src="https://res.cloudinary.com/federicog/image/upload/v1687290987/jquery-basics/upArrow_uhpjkp.png"
+                                alt="Up Arrow">
+                        </div>
+                        <div class="arrowContainer">
+                            <div>
+                                <p>Has dado clic en la flecha.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__ejercicios__used">
+                        <p>Los métodos/selectores utilizados son: :visible, .is(), hide() y show().</p>
+                    </div>
+                    <div class="content__ejercicios__buttons">
+                        <button id="btnHTMLFirstExercise">Ver HTML</button>
+                        <button id="btnSCSSFirstExercise">Ver SCSS</button>
+                        <button id="btnJSFirstExercise">Ver JS</button>
+                    </div>
+                </div>
+                <br><br>
+                <div class="content__ejercicios__second">
+                    <h3>Formulario</h3>
+                    <p>Pon en práctica lo aprendido y trata de realizar este ejercicio sin observar el código. Si no
+                        puedes realizarlo con éxito, no te preocupes. Siempre que quieras puedes ver el código.</p>
+                    <div id="form">
+                        <form>
+                            <p>Name: <input type="text" placeholder="Name" id="inputName"></p>
+                            <p>Email: <input type="email" placeholder="Email" id="inputEmail"></p>
+                            <p>Password: <input type="password" placeholder="Password" id="inputPassword"><span id="max">(Máximo 8
+                                    caracteres)</span></p>
+                            <p>Confirm password: <input type="password" placeholder="Confirm password" id="inputConfirmPassword"><span
+                                    id="confirmPassword"></span></p>
+                            <p><input type="submit" placeholder="Name" value="Submit" id="inputSubmit"></p>
+                        </form>
+                    </div>
+                    <div class="content__ejercicios__used">
+                        <p>Los métodos/selectores utilizados son: this, .addClass(), .removeClass(), .val(), .lenght, .html().</p>
+                    </div>
+                    <div class="content__ejercicios__buttons">
+                        <button id="btnHTMLSecondExercise">Ver HTML</button>
+                        <button id="btnJSSecondExercise">Ver JS</button>
+                    </div>
+                </div>
+                <br><br>
+                <div class="content__ejercicios__third">
+                    <h3>On & Off button</h3>
+                    <p>Pon en práctica lo aprendido y trata de realizar este ejercicio sin observar el código. Si no
+                        puedes realizarlo con éxito, no te preocupes. Siempre que quieras puedes ver el código.</p>
+                    <div class="content__ejercicios__onOff">
+                        <div class="onOff-container">
+                            <div id="onOffCaja">
+                                <div></div>
+                            </div>
+                            <div class="content__effects__buttons">
+                                <button id="btnOnOff">Botón</button>
+                                <button id="btnOn">On</button>
+                                <button id="btnOff">Off</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__ejercicios__used" style="margin-top: 0;">
+                        <p>Los métodos/selectores utilizados son: slideToggle(), .on(), .off(), .addClass(), .removeClass(), .text().</p>
+                    </div>
+                    <div class="content__ejercicios__buttons">
+                        <button id="btnHTMLThirdExercise">Ver HTML</button>
+                        <button id="btnSCSSThirdExercise">Ver SCSS</button>
+                        <button id="btnJSThirdExercise">Ver JS</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://kit.fontawesome.com/b91a909361.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script src="js/headerAnimation.js"></script>
+    <script src="js/exercises.js"></script>
     <script src="js/app.js"></script>
 </body>
 

@@ -76,6 +76,29 @@
     display: flex;
     justify-content: center;
     flex-direction: column; }
+    .content__methods .dimensions__desc {
+      margin-bottom: 10px; }
+    .content__methods .dimensions__example {
+      background-color: rgba(128, 128, 128, 0.214);
+      height: 200px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .content__methods .dimensions__example button {
+        background-color: rgba(115, 115, 115, 0.047);
+        color: black;
+        padding: 8px;
+        margin: 5px;
+        cursor: pointer; }
+    .content__methods .dimensions__box {
+      width: 170px;
+      border: 4px solid black;
+      margin: 5px;
+      padding: 8px;
+      height: 80px;
+      background-color: red; }
   .content__events {
     width: 60%;
     display: flex;
@@ -185,6 +208,77 @@
       font-size: 1.4rem; }
     .content__ajax__desc {
       margin-top: 20px; }
+  .content__ejercicios {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .content__ejercicios__arrow {
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      .content__ejercicios__arrow .arrowContainer {
+        width: 90%;
+        font-size: 20px;
+        height: 150px;
+        text-align: center; }
+        .content__ejercicios__arrow .arrowContainer div {
+          display: none;
+          background-color: rgba(128, 128, 128, 0.214);
+          height: 100%; }
+          .content__ejercicios__arrow .arrowContainer div p {
+            padding-top: 75px;
+            font-size: 1.1rem; }
+      .content__ejercicios__arrow .arrowDownUp {
+        padding: 20px; }
+        .content__ejercicios__arrow .arrowDownUp .arrowDown {
+          width: 80px; }
+        .content__ejercicios__arrow .arrowDownUp .arrowUp {
+          width: 80px;
+          display: none; }
+    .content__ejercicios__used {
+      margin-top: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(128, 128, 128, 0.214); }
+    .content__ejercicios__buttons {
+      display: flex;
+      justify-content: center; }
+      .content__ejercicios__buttons button {
+        width: 30%;
+        background-color: rgba(115, 115, 115, 0.047);
+        color: black;
+        padding: 8px;
+        margin: 5px;
+        cursor: pointer; }
+    .content__ejercicios #form {
+      margin-top: 10px;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(128, 128, 128, 0.214); }
+      .content__ejercicios #form form input {
+        padding: 8px; }
+      .content__ejercicios #form form p {
+        margin: 5px; }
+      .content__ejercicios #form form span {
+        margin: 5px; }
+    .content__ejercicios__onOff #onOffCaja {
+      margin-top: 10px;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(128, 128, 128, 0.214); }
+      .content__ejercicios__onOff #onOffCaja div {
+        width: 170px;
+        height: 60%;
+        background-color: red; }
 
 .redText {
   color: #f61a1a; }
@@ -218,6 +312,21 @@
 
 .pl60 {
   padding-left: 60px; }
+
+.selected-button {
+  border: green solid 3px;
+  background-color: greenyellow; }
+
+.unselected-button {
+  border: red solid 3px;
+  background-color: #f17777; }
+
+.jc-bs3-container {
+  width: 80%; }
+
+.jconfirm-holder {
+  display: flex;
+  justify-content: center; }
 
 .callout {
   background-color: rgba(128, 128, 128, 0.214);
