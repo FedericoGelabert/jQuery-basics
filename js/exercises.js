@@ -55,3 +55,31 @@ $("#btnOn").on('click', function(){
 $("#btnOff").on('click', function () {
     $("#btnOnOff").off("click").removeClass("selected-button").addClass("unselected-button").text("Botón desactivado")
 })
+
+/* Encuentra el número 3 */
+
+let parent = $('.hover-container')
+let divs = parent.children()
+parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0])
+
+$('.hover-div').hover(function () {
+    if ($(this).text() === "3") {
+        $('.hover-results strong').text("¡Has Ganado!")
+    }
+    $(this).css('color', 'white')
+})
+
+
+/* Visualización de imágenes */
+
+let allImages = $('.other-images img')
+allImages.eq(0).addClass('selected-img')
+$('.main-images img:eq(0)').nextAll().hide()
+
+allImages.on('click', function () {
+    let indice = $(this).index()
+    allImages.removeClass('selected-img')
+    $(this).addClass('selected-img')
+
+    $('.main-images img').eq(indice).show().siblings().hide()
+})

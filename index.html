@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>jQuery Basics</title>
 </head>
@@ -232,7 +234,8 @@
                         </div> <br>
                         <p class="greyText">// Hidden & visible</p>
                         <p><span class="redCalloutText">$</span>(<span class="greenCalloutText">div:hidden</span>)</p>
-                        <p><span class="redCalloutText">$</span>(<span class="greenCalloutText">div:visible</span>)</p> <br>
+                        <p><span class="redCalloutText">$</span>(<span class="greenCalloutText">div:visible</span>)</p>
+                        <br>
                         <div>
                             <p class="greyText">// Otros</p>
                             <p><span class="redCalloutText">$</span>(<span class="greenCalloutText">"ul
@@ -1081,15 +1084,17 @@
                         <form>
                             <p>Name: <input type="text" placeholder="Name" id="inputName"></p>
                             <p>Email: <input type="email" placeholder="Email" id="inputEmail"></p>
-                            <p>Password: <input type="password" placeholder="Password" id="inputPassword"><span id="max">(Máximo 8
+                            <p>Password: <input type="password" placeholder="Password" id="inputPassword"><span
+                                    id="max">(Máximo 8
                                     caracteres)</span></p>
-                            <p>Confirm password: <input type="password" placeholder="Confirm password" id="inputConfirmPassword"><span
-                                    id="confirmPassword"></span></p>
+                            <p>Confirm password: <input type="password" placeholder="Confirm password"
+                                    id="inputConfirmPassword"><span id="confirmPassword"></span></p>
                             <p><input type="submit" placeholder="Name" value="Submit" id="inputSubmit"></p>
                         </form>
                     </div>
                     <div class="content__ejercicios__used">
-                        <p>Los métodos/selectores utilizados son: this, .addClass(), .removeClass(), .val(), .lenght, .html().</p>
+                        <p>Los métodos/selectores utilizados son: this, .addClass(), .removeClass(), .val(), .lenght,
+                            .html().</p>
                     </div>
                     <div class="content__ejercicios__buttons">
                         <button id="btnHTMLSecondExercise">Ver HTML</button>
@@ -1114,7 +1119,8 @@
                         </div>
                     </div>
                     <div class="content__ejercicios__used" style="margin-top: 0;">
-                        <p>Los métodos/selectores utilizados son: slideToggle(), .on(), .off(), .addClass(), .removeClass(), .text().</p>
+                        <p>Los métodos/selectores utilizados son: slideToggle(), .on(), .off(), .addClass(),
+                            .removeClass(), .text().</p>
                     </div>
                     <div class="content__ejercicios__buttons">
                         <button id="btnHTMLThirdExercise">Ver HTML</button>
@@ -1122,16 +1128,169 @@
                         <button id="btnJSThirdExercise">Ver JS</button>
                     </div>
                 </div>
+                <br><br>
+                <div class="content__ejercicios__fourth">
+                    <h3>Encuentra el div con el número 3</h3>
+                    <p>Pon en práctica lo aprendido y trata de realizar este ejercicio sin observar el código. Si no
+                        puedes realizarlo con éxito, no te preocupes. Siempre que quieras puedes ver el código.</p>
+                    <div class="content__ejercicios__hover-game">
+                        <div class="hover-container">
+                            <div class="hover-div">1</div>
+                            <div class="hover-div">2</div>
+                            <div class="hover-div">3</div>
+                            <div class="hover-div">4</div>
+                            <div class="hover-div">5</div>
+                        </div>
+                        <div>
+                            <p class="hover-results">Resultado: <strong>Pending</strong></p>
+                        </div>
+                    </div>
+                    <div class="content__ejercicios__used" style="margin-top: 10px;">
+                        <p>Los métodos/selectores utilizados son: .children(), .append(), .splice(),
+                            Math.floor/Math.random, .length, .hover(), this, .text(), .css().</p>
+                    </div>
+                    <div class="content__ejercicios__buttons">
+                        <button id="btnHTMLFourthExercise">Ver HTML</button>
+                        <button id="btnSCSSFourthExercise">Ver SCSS</button>
+                        <button id="btnJSFourthExercise">Ver JS</button>
+                    </div>
+                </div>
+                <br><br>
+                <div class="content__ejercicios__fifth">
+                    <h3>Visualización de imágenes</h3>
+                    <p>Pon en práctica lo aprendido y trata de realizar este ejercicio sin observar el código. Si no
+                        puedes realizarlo con éxito, no te preocupes. Siempre que quieras puedes ver el código.</p>
+                    <div class="content__ejercicios__images">
+                        <div class="main-images">
+                            <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg"
+                                alt="Landscape 1">
+                            <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg"
+                                alt="Landscape 2">
+                            <img src="https://res.cloudinary.com/federicog/image/upload/v1687372901/jquery-basics/landscape2_vtsvpp.jpg"
+                                alt="Landscape 3">
+                        </div>
+                        <div class="other-images">
+                            <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg"
+                                alt="Landscape 1">
+                            <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg"
+                                alt="Landscape 2">
+                            <img src="https://res.cloudinary.com/federicog/image/upload/v1687372901/jquery-basics/landscape2_vtsvpp.jpg"
+                                alt="Landscape 3">
+                        </div>
+                    </div>
+                    <div class="content__ejercicios__used" style="margin-top: 10px;">
+                        <p>Los métodos/selectores utilizados son: eq, this, .addClass(), .nextAll(), .hide(),
+                            .on('click'), .index(), .removeClass(), .show(), .siblings().</p>
+                    </div>
+                    <div class="content__ejercicios__buttons">
+                        <button id="btnHTMLFifthExercise">Ver HTML</button>
+                        <button id="btnSCSSFifthExercise">Ver SCSS</button>
+                        <button id="btnJSFifthExercise">Ver JS</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content__plugins" id="plugins">
+            <h2>Plugins</h2>
+            <hr>
+            <div class="content__plugins__info">
+                <p class="content__plugins__desc"><b>En simples palabras</b>: Un plugin es una herramienta de código
+                    reutilizable escrito en un archivo estándar JavaScript.
+                    Estos archivos proporcionan <span class="redText">métodos jQuery</span> útiles que pueden ser
+                    utilizados junto con los métodos del framwork
+                    jQuery.</p> <br>
+                <p>Existe una cantidad variada de plugins, estos pueden adherirse a nuestro proyecto de la misma manera
+                    que se puede aplicar jQuery. El método de <b>descarga / instalación</b> depende del plugin.</p>
+                <div class="list">
+                    <h4>Páginas</h4>
+                    <ul>
+                        <li>jQuery Script.net: <a href="https://www.jqueryscript.net/"
+                                class="redText">https://www.jqueryscript.net/</a></li>
+                        <li>jQuery plugins: <a href="https://plugins.jquery.com/tag/jquery/"
+                                class="redText">https://plugins.jquery.com/tag/jquery/</a></li>
+                        <li>npm jquery-plugins: <a href="https://www.npmjs.com/search?q=keywords:jquery-plugin"
+                                class="redText">https://www.npmjs.com/search?q=keywords:jquery-plugin</a><b
+                                class="greyText"> (recomendado)</b></li>
+                        <li>cdnjs jquery-plugins: <a href="https://cdnjs.com/libraries?q=jquery"
+                                class="redText">https://cdnjs.com/libraries?q=jquery</a><b class="greyText">
+                                (recomendado)</b></li>
+                    </ul>
+                </div>
+                <div class="content__plugins__examples">
+                    <h3>Ejemplos de Plugins</h3>
+                    <div style="margin-top: 20px;" class="content__plugins__flickity">
+                        <li><b>Flickity</b></li>
+                        <p style="margin-bottom: 10px; font-size: 0.9rem;">Link: <a
+                                href="https://flickity.metafizzy.co/" class="redText">https://flickity.metafizzy.co/</a>
+                        </p>
+                        <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
+                            <div class="carousel-cell"><img
+                                    src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg"
+                                    alt="Landscape 1"></div>
+                            <div class="carousel-cell"><img
+                                    src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg"
+                                    alt="Landscape 2"></div>
+                            <div class="carousel-cell"><img
+                                    src="https://res.cloudinary.com/federicog/image/upload/v1687372901/jquery-basics/landscape2_vtsvpp.jpg"
+                                    alt="Landscape 3"></div>
+                        </div>
+                    </div>
+                    <div class="content__plugins__dateRange" style="margin-top: 50px;">
+                        <li><b>Date Range Picker</b></li>
+                        <p style="margin-bottom: 10px; font-size: 0.9rem;">Link: <a
+                            href="https://www.daterangepicker.com/" class="redText">https://www.daterangepicker.com/</a>
+                    </p>
+                        <div class="dateRange-container">
+                            <div class="dateRange">
+                                <label for="text">Rango de Fecha</label>
+                                <input type="text" id="date1">
+                            </div>
+                            <div class="dateRange">
+                                <label for="text">Única Fecha</label>
+                                <input type="text" id="date2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__plugins__fancyBox" style="margin-top: 50px;">
+                        <li><b>Fancybox</b></li>
+                        <p style="margin-bottom: 10px; font-size: 0.9rem;">Link: <a
+                            href="https://fancyapps.com/" class="redText">https://fancyapps.com/</a></p>
+                        <div class="fancybox-container">
+                            <a href="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg" data-fancybox data-caption="Beautiful Landscape Image">
+                                <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg" />
+                            </a>
+                            <a href="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg" data-fancybox data-caption="Beautiful Landscape Image 2">
+                                <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg" />
+                            </a>
+                        </div>
+                        <div class="callout">
+                            <div class="callout__icon">
+                                <span><i class="fa-solid fa-circle-info"></i></span>
+                            </div>
+                            <div class="callout__text">
+                                <p>Haz clic en las imágenes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
+    <footer class="footer">
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    </footer>
+
+    
     <script src="https://kit.fontawesome.com/b91a909361.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/headerAnimation.js"></script>
     <script src="js/exercises.js"></script>
     <script src="js/app.js"></script>

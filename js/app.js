@@ -1,5 +1,26 @@
 jQuery(function () {
 
+    $('.main-carousel').flickity({
+        cellAlign: 'left',
+        contain: true
+    });
+
+    $('#date1').daterangepicker({
+        locale: {
+            format: "YYYY-MM-DD hh:mm:ss"
+        },
+        timePicker: true,
+        showDropdowns: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(48, 'hour')
+    })
+
+    $('#date2').daterangepicker({
+        singleDatePicker: true
+    })
+
+    Fancybox.bind("[data-fancybox]", {
+      });
 
     $('#btnViewDimensions').on('click', function () {
         let boxWidth = $('.dimensions__box').width()
@@ -435,6 +456,149 @@ jQuery(function () {
             </pre>`,
         });
     })
-  
+
+    $('#btnHTMLFourthExercise').on('click', function () {
+        $.alert({
+            title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
+            content: `
+            <pre>
+            <code class="code">
+                &lt;div class="container"&gt;
+                    &lt;div class="hover-container"&gt;
+                        &lt;div class="hover-div"&gt;1&lt;/div&gt;
+                        &lt;div class="hover-div"&gt;2&lt;/div&gt;
+                        &lt;div class="hover-div"&gt;3&lt;/div&gt;
+                        &lt;div class="hover-div"&gt;4&lt;/div&gt;
+                        &lt;div class="hover-div"&gt;5&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;p class="hover-results"&gt;Resultado: &lt;strong&gt;Pending&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            </pre>`,
+        });
+    })
+
+    $('#btnSCSSFourthExercise').on('click', function () {
+        $.alert({
+            title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
+            content: `
+            <pre>
+            <code class="code">
+            .hover-container {
+                display: flex;
+
+                .hover-div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    background-color: black;
+                    margin: 10px;
+                }
+            }
+
+            .hover-results {
+                padding-top: 30px;
+            }
+            </code>
+            </pre>`,
+        });
+    })
+
+    $('#btnJSFourthExercise').on('click', function () {
+        $.alert({
+            title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
+            content: `
+            <pre>
+            <code class="code">
+            let parent = $('.hover-container')
+            let divs = parent.children()
+            parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0])
+
+            $('.hover-div').hover(function () {
+                if ($(this).text() === "3") {
+                    $('.hover-results strong').text("¡Has Ganado!")
+                }
+                $(this).css('color', 'white')
+            })
+            </code>
+            </pre>`,
+        });
+    })
+
+    $('#btnHTMLFifthExercise').on('click', function () {
+        $.alert({
+            title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
+            content: `
+            <pre>
+            <code class="code">
+                &lt;div class="container"&gt;
+                    &lt;div class="main-images"&gt;
+                        &lt;img src="url" alt=""&gt;
+                        &lt;img src="url" alt=""&gt;
+                        &lt;img src="url" alt=""&gt;
+                    &lt;/div&gt;
+                    &lt;div class="other-images"&gt;
+                        &lt;img src="url" alt=""&gt;
+                        &lt;img src="url" alt=""&gt;
+                        &lt;img src="url" alt=""&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            </pre>`,
+        });
+    })
+
+    $('#btnSCSSFifthExercise').on('click', function () {
+        $.alert({
+            title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
+            content: `
+            <pre>
+            <code class="code">
+            .main-images img {
+                width: 350px;
+                height: 95%;
+                object-fit: cover;
+            }
+            
+            .other-images img {
+                margin-top: 15px;
+                width: 80px;
+                height: 80%;
+                display: inline-block;
+            }
+
+            .selected-img {
+                border: 3px solid red;
+              }
+            </code>
+            </pre>`,
+        });
+    })
+
+    $('#btnJSFifthExercise').on('click', function () {
+        $.alert({
+            title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
+            content: `
+            <pre>
+            <code class="code">
+            let allImages = $('.other-images img')
+            allImages.eq(0).addClass('selected-img')
+            $('.main-images img:eq(0)').nextAll().hide()
+            
+            allImages.on('click', function () {
+                let indice = $(this).index()
+                allImages.removeClass('selected-img')
+                $(this).addClass('selected-img')
+            
+                $('.main-images img').eq(indice).show().siblings().hide()
+            })
+            </code>
+            </pre>`,
+        });
+    })
 
 })
