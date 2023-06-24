@@ -1,18 +1,31 @@
 jQuery(function () {
 
+    $('#preloader').delay(3000).fadeOut()
+    $('.allContent').fadeIn(3100, function(){
+        $('body').addClass('overflowClass')
+        $(this).removeClass('allContent')
+    })
+
+    $(window).on('scroll', function(){
+        $('.header').toggleClass('sticky-header', window.scrollY > 0)
+        $('#gradient-background').toggleClass('sticky-gradient', window.scrollY > 0)
+        $('.content').toggleClass('content-padding', window.scrollY > 0)
+    })
+
 
     $('#darkButton').on('click', function(){
         $(this).hide()
         $('#lightButton').show()
         $('body').css({'color': 'white', 'background-color': 'black'})
         $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-light_r1eqa9.png');
-        $('hr').css('background-color', 'white')
-        $(".header a, h1, .fa-sun, .footer a, .footer h3").css('color','black')
+        $('hr, .is-selected').css('background-color', 'white')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin").css('color','black')
         $('.footer__copy').css('color', 'rgba(0,0,0,0.5)')
         $('.github-message-icon').css('color', 'white')
         $('.content button').css({'color': 'white', 'background-color': 'black', 'border': '2px solid white'})
+        $('.dot').css('background-color', 'rgba(255, 255, 255, .8)')
 
-        $('.header a, .footer a').hover(function(e){
+        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin').hover(function(e){
             $(this).css('color', e.type === 'mouseenter'?'white':'black')
         })
     })
@@ -22,22 +35,36 @@ jQuery(function () {
         $('#darkButton').show()
         $('body').css({'color': 'black', 'background-color': 'white'})
         $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-black_mmrguf.png');
-        $('hr').css('background-color', 'black')
-        $(".header a, h1, .fa-sun, .footer a, .footer h3").css('color','white')
+        $('hr, .is-selected').css('background-color', 'black')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin").css('color','white')
         $('.footer__copy').css('color', 'rgba(255, 255, 255, .6)')
         $('.github-message-icon').css('color', 'black')
         $('.content button').css({'color': 'black', 'background-color': 'white', 'border': '2px solid black'})
+        $('.dot').css('background-color', 'rgba(0, 0, 0, .8)')
 
-        $('.header a, .footer a').hover(function(e){
+        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin').hover(function(e){
             $(this).css('color', e.type === 'mouseenter'?'black':'white')
         })
     })
 
+    $('#settingsButton').on('click', function(){
+        $('.media-menu').fadeToggle(400)
+    })
 
-    $('.main-carousel').flickity({
-        cellAlign: 'left',
-        contain: true
-    });
+
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
 
     $('#date1').daterangepicker({
         locale: {
@@ -69,6 +96,7 @@ jQuery(function () {
         $.alert({
             title: '<span class="redText" style="text-decoration:underline;">Dimensiones</span>',
             content: `
+                <div class="codeBlack">
                 Width: ${boxWidth} <br> 
                 Height: ${boxHeight} <br> 
                 Width + padding: ${boxInnerWidth} <br>
@@ -77,6 +105,7 @@ jQuery(function () {
                 Height + padding + border: ${boxOuterHeight} <br>
                 Width + padding + border + margin: ${boxOuterWidthTrue} <br>
                 Height + padding + border + margin: ${boxOuterHeightTrue} 
+                </div>
             `,
         });
     })

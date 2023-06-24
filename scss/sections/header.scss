@@ -1,16 +1,23 @@
 #gradient-background {
     width: 100%;
     height: 300px;
+    position: fixed;
+    top: -50px;
+}
+
+#gradient-background.sticky-gradient {
+    height: 100px;
 }
 
 .header {
     width: 100%;
-    height: 300px;
+    height: 210px;
     display: flex;
-    position: absolute;
+    position: fixed;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    z-index: 10;
 
     h1 { 
         color: white;
@@ -19,7 +26,7 @@
 
     &__nav ul {
         display: flex;
-        margin-top: 90px;
+        margin-top: 70px;
     }
 
     &__link {
@@ -45,9 +52,64 @@
     
     #darkButton {
         color: white;
+        transition: 0.4s all;
+
+        &:hover {
+            color: black;
+        }
     }
 
     #lightButton {
         display: none;
+        transition: 0.4s all;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        right: 0;
+        display: flex;
+
+        i {
+            margin-right: 12px;
+        }
+
+        .media-settings {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fa-linkedin, .fa-github {
+            color: white;
+            transition: .4s all;
+        }
+
+        .fa-linkedin:hover {
+            color: black;
+        }
+
+        .fa-github:hover {
+            color: black;
+        }
+    }
+
+    &__mode {
+        position: absolute;
+        left: 0;
+        display: flex;
+
+        i {
+            margin-left: 12px;
+        }
+    }
+}
+
+.header.sticky-header {
+    height: 9px;
+    h1 {
+        font-size: 0;
     }
 }

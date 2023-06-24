@@ -6,24 +6,39 @@
   font-family: 'Rubik', sans-serif;
   scroll-behavior: smooth; }
 
+.allContent {
+  display: none; }
+
+body {
+  overflow: hidden; }
+
+.overflowClass {
+  overflow: auto; }
+
 #gradient-background {
   width: 100%;
-  height: 300px; }
+  height: 300px;
+  position: fixed;
+  top: -50px; }
+
+#gradient-background.sticky-gradient {
+  height: 100px; }
 
 .header {
   width: 100%;
-  height: 300px;
+  height: 210px;
   display: flex;
-  position: absolute;
+  position: fixed;
   align-items: center;
   justify-content: flex-end;
-  flex-direction: column; }
+  flex-direction: column;
+  z-index: 10; }
   .header h1 {
     color: white;
     font-size: 5rem; }
   .header__nav ul {
     display: flex;
-    margin-top: 90px; }
+    margin-top: 70px; }
   .header__link {
     list-style: none;
     padding: 0 25px 12px 25px;
@@ -38,16 +53,50 @@
     cursor: pointer;
     font-size: 1.5rem; }
   .header #darkButton {
-    color: white; }
+    color: white;
+    transition: 0.4s all; }
+    .header #darkButton:hover {
+      color: black; }
   .header #lightButton {
-    display: none; }
+    display: none;
+    transition: 0.4s all; }
+    .header #lightButton:hover {
+      color: white !important; }
+  .header__buttons {
+    position: absolute;
+    right: 0;
+    display: flex; }
+    .header__buttons i {
+      margin-right: 12px; }
+    .header__buttons .media-settings {
+      display: flex;
+      flex-direction: column; }
+    .header__buttons .fa-linkedin, .header__buttons .fa-github {
+      color: white;
+      transition: .4s all; }
+    .header__buttons .fa-linkedin:hover {
+      color: black; }
+    .header__buttons .fa-github:hover {
+      color: black; }
+  .header__mode {
+    position: absolute;
+    left: 0;
+    display: flex; }
+    .header__mode i {
+      margin-left: 12px; }
+
+.header.sticky-header {
+  height: 9px; }
+  .header.sticky-header h1 {
+    font-size: 0; }
 
 .content {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 40px; }
+  margin-top: 40px;
+  padding-top: 250px; }
   .content h2 {
     font-size: 2rem;
     margin-top: 40px; }
@@ -337,22 +386,15 @@
     margin-top: 30px; }
     .content__plugins__desc {
       margin-top: 20px; }
-    .content__plugins .carousel-cell {
+    .content__plugins .swiper {
       width: 100%;
-      height: 400px;
-      margin-right: 10px;
-      background: #8C8;
-      border-radius: 5px;
-      counter-increment: carousel-cell; }
-    .content__plugins .carousel-cell img {
-      object-fit: cover;
-      width: 100%; }
-    .content__plugins .carousel-cell:before {
-      display: block;
-      text-align: center;
-      line-height: 200px;
-      font-size: 80px;
+      height: 500px; }
+    .content__plugins .swiper-button-next, .content__plugins .swiper-button-prev {
       color: white; }
+    .content__plugins .swiper-scrollbar-drag {
+      background-color: white; }
+    .content__plugins .swiper-scrollbar {
+      background-color: rgba(255, 255, 255, 0.668); }
     .content__plugins .dateRange-container {
       width: 100%;
       height: 200px;
@@ -398,6 +440,9 @@
       transition: 0.5s all; }
     .content__finalmessage__github .fa-github:hover {
       transform: scale(1.3); }
+
+.content.content-padding {
+  padding-top: 150px; }
 
 .footer {
   margin-top: 50px;
@@ -476,6 +521,22 @@
 
 .codeBlack {
   color: black !important; }
+
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  position: relative; }
+  #preloader h2 {
+    font-size: 4rem; }
+  #preloader img {
+    width: 300px; }
 
 .jc-bs3-container {
   width: 80%; }

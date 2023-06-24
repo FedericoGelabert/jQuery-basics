@@ -8,6 +8,18 @@
   scroll-behavior: smooth;
 }
 
+.allContent {
+  display: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.overflowClass {
+  overflow: auto;
+}
+
 // Sections
 
 @import "./sections/header.scss";
@@ -81,6 +93,32 @@
 .codeBlack {
   color: black !important;
 }
+
+
+// Preload
+
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  position: relative;
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  img {
+    width: 300px;
+  }
+}
+
+
 
 // Components
 
