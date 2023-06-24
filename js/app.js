@@ -1,6 +1,39 @@
 jQuery(function () {
 
 
+    $('#darkButton').on('click', function(){
+        $(this).hide()
+        $('#lightButton').show()
+        $('body').css({'color': 'white', 'background-color': 'black'})
+        $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-light_r1eqa9.png');
+        $('hr').css('background-color', 'white')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3").css('color','black')
+        $('.footer__copy').css('color', 'rgba(0,0,0,0.5)')
+        $('.github-message-icon').css('color', 'white')
+        $('.content button').css({'color': 'white', 'background-color': 'black', 'border': '2px solid white'})
+
+        $('.header a, .footer a').hover(function(e){
+            $(this).css('color', e.type === 'mouseenter'?'white':'black')
+        })
+    })
+
+    $('#lightButton').on('click', function(){
+        $(this).hide()
+        $('#darkButton').show()
+        $('body').css({'color': 'black', 'background-color': 'white'})
+        $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-black_mmrguf.png');
+        $('hr').css('background-color', 'black')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3").css('color','white')
+        $('.footer__copy').css('color', 'rgba(255, 255, 255, .6)')
+        $('.github-message-icon').css('color', 'black')
+        $('.content button').css({'color': 'black', 'background-color': 'white', 'border': '2px solid black'})
+
+        $('.header a, .footer a').hover(function(e){
+            $(this).css('color', e.type === 'mouseenter'?'black':'white')
+        })
+    })
+
+
     $('.main-carousel').flickity({
         cellAlign: 'left',
         contain: true
