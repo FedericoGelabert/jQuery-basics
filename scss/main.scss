@@ -12,6 +12,7 @@
 
 @import "./sections/header.scss";
 @import "./sections/content.scss";
+@import "./sections/footer.scss";
 
 // Colors
 
@@ -25,6 +26,10 @@
 
 .greenText {
   color: rgb(5, 179, 5);
+}
+
+.yellowText {
+  color: rgb(240, 165, 3);
 }
 
 .greyText {
@@ -60,17 +65,21 @@
 }
 
 .selected-button {
-  border: green solid 3px;
+  border: green solid 3px !important;
   background-color: greenyellow;
 }
 
 .unselected-button {
-  border: red solid 3px;
+  border: red solid 3px !important;
   background-color: #f17777;
 }
 
 .selected-img {
   border: 3px solid red;
+}
+
+.codeBlack {
+  color: black !important;
 }
 
 // Components

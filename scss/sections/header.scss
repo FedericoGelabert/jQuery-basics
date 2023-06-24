@@ -1,11 +1,11 @@
 #gradient-background {
     width: 100%;
-    height: 40vh;
+    height: 300px;
 }
 
 .header {
     width: 100%;
-    height: 40vh;
+    height: 300px;
     display: flex;
     position: absolute;
     align-items: center;
@@ -31,5 +31,23 @@
     a {
         color: white;
         text-decoration: none;
+        transition: 0.4s all;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    i {
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    
+    #darkButton {
+        color: white;
+    }
+
+    #lightButton {
+        display: none;
     }
 }

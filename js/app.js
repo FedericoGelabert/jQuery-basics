@@ -1,5 +1,6 @@
 jQuery(function () {
 
+
     $('.main-carousel').flickity({
         cellAlign: 'left',
         contain: true
@@ -219,7 +220,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
                 &lt;div class="container"&gt;
                     &lt;div class="img-container"&gt;
                         &lt;img src="url" alt="" id="flechaArriba"&gt;
@@ -241,7 +242,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             .container{
                 display: flex;
                 align-items: center;
@@ -288,7 +289,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             $('#flechaAbajo').on('click', function () {
                 $(this).hide()
                 $('#flechaArriba').show()
@@ -312,7 +313,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
                 &lt;div id="form"&gt;
                     &lt;form&gt;
                         &lt;h2&gt;Registrate&lt;/h2&gt;
@@ -335,7 +336,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             $('form').on('submit', function (e) {
                 e.preventDefault()
             })
@@ -380,7 +381,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
                 &lt;div class="container"&gt;
                     &lt;div class="container-caja"&gt;
                         &lt;div&gt;&lt;/div&gt;
@@ -401,7 +402,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             .container {
                 .container-caja {
                     margin-top: 10px;
@@ -439,7 +440,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             function slideToggleFn() {
                 $('.container-caja div').slideToggle()
             }
@@ -462,7 +463,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
                 &lt;div class="container"&gt;
                     &lt;div class="hover-container"&gt;
                         &lt;div class="hover-div"&gt;1&lt;/div&gt;
@@ -485,7 +486,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             .hover-container {
                 display: flex;
 
@@ -513,7 +514,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             let parent = $('.hover-container')
             let divs = parent.children()
             parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0])
@@ -534,7 +535,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
                 &lt;div class="container"&gt;
                     &lt;div class="main-images"&gt;
                         &lt;img src="url" alt=""&gt;
@@ -557,7 +558,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             .main-images img {
                 width: 350px;
                 height: 95%;
@@ -584,7 +585,7 @@ jQuery(function () {
             title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
             content: `
             <pre>
-            <code class="code">
+            <code class="code codeBlack">
             let allImages = $('.other-images img')
             allImages.eq(0).addClass('selected-img')
             $('.main-images img:eq(0)').nextAll().hide()

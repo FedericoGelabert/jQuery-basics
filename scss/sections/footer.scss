@@ -1,0 +1,47 @@
+
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to right, #fb1212, #ff005b, #ee009c, #b22ed5, #125df9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: center;
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            list-style: none;
+            padding: 10px;
+        }
+    }
+
+    a {
+        color: white;
+        transition: 0.4s all;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    &__media {
+        span {
+            font-size: 1.6rem;
+            margin: 3px;
+        }
+    }
+
+    &__copy {
+        color: rgba(255, 255, 255, 0.778);
+    }
+    
+    
+}

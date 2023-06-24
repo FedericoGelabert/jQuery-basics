@@ -8,11 +8,11 @@
 
 #gradient-background {
   width: 100%;
-  height: 40vh; }
+  height: 300px; }
 
 .header {
   width: 100%;
-  height: 40vh;
+  height: 300px;
   display: flex;
   position: absolute;
   align-items: center;
@@ -30,7 +30,17 @@
     font-size: 1.1rem; }
   .header a {
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: 0.4s all; }
+  .header a:hover {
+    color: black; }
+  .header i {
+    cursor: pointer;
+    font-size: 1.5rem; }
+  .header #darkButton {
+    color: white; }
+  .header #lightButton {
+    display: none; }
 
 .content {
   width: 100%;
@@ -370,6 +380,52 @@
         text-align: center; }
       .content__plugins .fancybox-container img {
         width: 45%; }
+  .content__finalmessage {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px; }
+    .content__finalmessage img {
+      width: 100%; }
+    .content__finalmessage p:nth-child(1) {
+      padding-top: 20px; }
+    .content__finalmessage__github .fa-github {
+      font-size: 2rem;
+      padding: 15px;
+      color: black;
+      transition: 0.5s all; }
+    .content__finalmessage__github .fa-github:hover {
+      transform: scale(1.3); }
+
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to right, #fb1212, #ff005b, #ee009c, #b22ed5, #125df9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: center; }
+  .footer h3 {
+    font-size: 3rem; }
+  .footer ul {
+    display: flex; }
+    .footer ul li {
+      list-style: none;
+      padding: 10px; }
+  .footer a {
+    color: white;
+    transition: 0.4s all; }
+  .footer a:hover {
+    color: black; }
+  .footer__media span {
+    font-size: 1.6rem;
+    margin: 3px; }
+  .footer__copy {
+    color: rgba(255, 255, 255, 0.778); }
 
 .redText {
   color: #f61a1a; }
@@ -379,6 +435,9 @@
 
 .greenText {
   color: #05b305; }
+
+.yellowText {
+  color: #f0a503; }
 
 .greyText {
   color: rgba(128, 128, 128, 0.668); }
@@ -405,15 +464,18 @@
   padding-left: 60px; }
 
 .selected-button {
-  border: green solid 3px;
+  border: green solid 3px !important;
   background-color: greenyellow; }
 
 .unselected-button {
-  border: red solid 3px;
+  border: red solid 3px !important;
   background-color: #f17777; }
 
 .selected-img {
   border: 3px solid red; }
+
+.codeBlack {
+  color: black !important; }
 
 .jc-bs3-container {
   width: 80%; }

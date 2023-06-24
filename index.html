@@ -33,7 +33,7 @@
                 <a href="#ajax">
                     <li class="header__link">Ajax</li>
                 </a>
-                <a href="#ejercicios">
+                <a href="#exercises">
                     <li class="header__link">Ejercicios</li>
                 </a>
                 <a href="#plugins">
@@ -51,8 +51,8 @@
         <section class="content__introduction">
             <h2>Introducción</h2>
             <hr>
-            <img src="https://res.cloudinary.com/federicog/image/upload/v1687191725/jquery-basics/jquery-logo_k69qbl.png"
-                alt="jQuery Logo">
+            <img src="https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-black_mmrguf.png"
+                alt="jQuery Logo" class="jquery-logo">
             <div class="content__introduction__text">
                 <p>Creado por John Resig en 2006, <b>jQuery</b> es una librería de <b class="redText">JavaScript</b> que
                     permite simplificar la manera de interactuar
@@ -1043,7 +1043,7 @@
                 </div>
             </div>
         </section>
-        <section class="content__ejercicios" id="ejercicios">
+        <section class="content__ejercicios" id="exercises">
             <h2>Ejercicios</h2>
             <hr>
             <div class="content__ejercicios__info">
@@ -1242,11 +1242,11 @@
                     </p>
                         <div class="dateRange-container">
                             <div class="dateRange">
-                                <label for="text">Rango de Fecha</label>
+                                <span for="text">Rango de Fecha</span>
                                 <input type="text" id="date1">
                             </div>
                             <div class="dateRange">
-                                <label for="text">Única Fecha</label>
+                                <span for="text">Única Fecha</span>
                                 <input type="text" id="date2">
                             </div>
                         </div>
@@ -1255,36 +1255,63 @@
                         <li><b>Fancybox</b></li>
                         <p style="margin-bottom: 10px; font-size: 0.9rem;">Link: <a
                             href="https://fancyapps.com/" class="redText">https://fancyapps.com/</a></p>
-                        <div class="fancybox-container">
-                            <a href="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg" data-fancybox data-caption="Beautiful Landscape Image">
-                                <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg" />
-                            </a>
-                            <a href="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg" data-fancybox data-caption="Beautiful Landscape Image 2">
-                                <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg" />
-                            </a>
-                        </div>
-                        <div class="callout">
-                            <div class="callout__icon">
-                                <span><i class="fa-solid fa-circle-info"></i></span>
+                            <div class="fancybox-container">
+                                <a href="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg" data-fancybox data-caption="Beautiful Landscape Image">
+                                    <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape1_yw5ija.jpg" />
+                                </a>
+                                <a href="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg" data-fancybox data-caption="Beautiful Landscape Image 2">
+                                    <img src="https://res.cloudinary.com/federicog/image/upload/v1687372328/jquery-basics/landscape3_atsldu.jpg" />
+                                </a>
                             </div>
-                            <div class="callout__text">
-                                <p>Haz clic en las imágenes.</p>
+                            <div class="callout">
+                                <div class="callout__icon">
+                                    <span><i class="fa-solid fa-circle-info"></i></span>
+                                </div>
+                                <div class="callout__text">
+                                    <p>Haz clic en las imágenes.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+            </div>
+        </section>
+        <section class="content__finalmessage">
+            <h3>Mensaje Final</h3>
+            <hr>
+            <div class="content__finalmessage__text">
+                <p>Espero que les haya aportado valor.</p>
+                <p>Cualquier sugerencia, aporte extra o duda no piensen dos veces en preguntar.</p>
+                <div class="content__finalmessage__github">
+                    <span><a href="https://github.com/FedericoGelabert/jQuery-basics"><i class="fa-brands fa-github github-message-icon"></i></a></span>
+                    <p>¡No olvides darle <span class="yellowText"><i class="fa-solid fa-star"></i></span> en GitHub!</p>
+                    <img src="https://res.cloudinary.com/federicog/image/upload/v1687557437/jquery-basics/starred_goaiby.png" alt="github star">
                 </div>
             </div>
         </section>
     </div>
-
+    
     <footer class="footer">
-
+        <div class="footer__media">
+            <a href="https://github.com/FedericoGelabert"><span><i class="fa-brands fa-github"></i></span></a>
+            <a href="https://www.linkedin.com/in/federico-gelabert/"><span><i class="fa-brands fa-linkedin"></i></span></a>
+        </div>
+        <h3>jQuery Basics</h3>
+        <ul>
+            <li><a href="#selectors">Selectores</a></li>
+            <li><a href="#methods">Métodos</a></li>
+            <li><a href="#events">Eventos</a></li>
+            <li><a href="#effects">Efectos</a></li>
+            <li><a href="#ajax">Ajax</a></li>
+            <li><a href="#exercises">Ejercicios</a></li>
+            <li><a href="#plugins">Plugins</a></li>
+        </ul>
+        <span class="footer__copy">Copyright 2023 © Federico Gelabert WebDev.</span>
     </footer>
-
+    
     
     <script src="https://kit.fontawesome.com/b91a909361.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
