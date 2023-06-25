@@ -3,112 +3,120 @@
     height: 300px;
     position: fixed;
     top: -50px;
+    z-index: 8;
 }
 
 #gradient-background.sticky-gradient {
     height: 100px;
 }
 
-.header {
-    width: 100%;
-    height: 210px;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    z-index: 10;
+.header-container {
+    margin-top: 40px;
 
-    h1 { 
-        color: white;
-        font-size: 5rem;
-    }
-
-    &__nav ul {
+    .header {
+        width: 100%;
+        height: 210px;
         display: flex;
-        margin-top: 70px;
-    }
+        position: fixed;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        z-index: 10;
 
-    &__link {
-        list-style: none;
-        padding: 0 25px 12px 25px;
-        font-size: 1.1rem;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-        transition: 0.4s all;
-    }
-
-    a:hover {
-        color: black;
-    }
-
-    i {
-        cursor: pointer;
-        font-size: 1.5rem;
-    }
-    
-    #darkButton {
-        color: white;
-        transition: 0.4s all;
-
-        &:hover {
-            color: black;
-        }
-    }
-
-    #lightButton {
-        display: none;
-        transition: 0.4s all;
-
-        &:hover {
-            color: white !important;
-        }
-    }
-
-    &__buttons {
-        position: absolute;
-        right: 0;
-        display: flex;
-
-        i {
-            margin-right: 12px;
-        }
-
-        .media-settings {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .fa-linkedin, .fa-github {
+        h1 {
             color: white;
-            transition: .4s all;
+            font-size: 5rem;
         }
 
-        .fa-linkedin:hover {
+        &__nav ul {
+            display: flex;
+            margin-top: 70px;
+        }
+
+        &__link {
+            list-style: none;
+            padding: 0 25px 12px 25px;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: 0.4s all;
+        }
+
+        a:hover {
             color: black;
         }
-
-        .fa-github:hover {
-            color: black;
-        }
-    }
-
-    &__mode {
-        position: absolute;
-        left: 0;
-        display: flex;
 
         i {
-            margin-left: 12px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        #darkButton {
+            color: white;
+            transition: 0.4s all;
+
+            &:hover {
+                color: black;
+            }
+        }
+
+        #lightButton {
+            display: none;
+            transition: 0.4s all;
+
+            &:hover {
+                color: white !important;
+            }
+        }
+
+        &__buttons {
+            position: absolute;
+            right: 0;
+            display: flex;
+
+            i {
+                margin-right: 12px;
+            }
+
+            .media-settings {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .fa-linkedin,
+            .fa-github {
+                color: white;
+                transition: .4s all;
+            }
+
+            .fa-linkedin:hover {
+                color: black;
+            }
+
+            .fa-github:hover {
+                color: black;
+            }
+        }
+
+        &__mode {
+            position: absolute;
+            left: 0;
+            display: flex;
+
+            i {
+                margin-left: 12px;
+            }
         }
     }
 }
 
 .header.sticky-header {
     height: 9px;
+    z-index: 10;
+
     h1 {
         font-size: 0;
     }

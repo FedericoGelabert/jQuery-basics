@@ -1,5 +1,10 @@
 jQuery(function () {
 
+    $('.content, .header, #gradient-background, .footer').hide()
+    $('#gradient-background, .header').delay(3500).fadeIn()
+    $('.content, .footer').delay(4200).fadeIn()
+    
+
     $('#preloader').delay(3000).fadeOut()
     $('.allContent').fadeIn(3100, function(){
         $('body').addClass('overflowClass')
@@ -11,6 +16,7 @@ jQuery(function () {
         $('#gradient-background').toggleClass('sticky-gradient', window.scrollY > 0)
         $('.content').toggleClass('content-padding', window.scrollY > 0)
     })
+
 
 
     $('#darkButton').on('click', function(){

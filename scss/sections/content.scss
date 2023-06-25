@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-top: 50px;
 }
 
 @mixin grey-box {
@@ -17,7 +18,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
     padding-top: 250px;
 
     h2 {
@@ -394,6 +394,8 @@
         .swiper {
             width: 100%;
             height: 500px;
+            position: relative;
+            z-index: 2;
           }
 
         .swiper-button-next, .swiper-button-prev {

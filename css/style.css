@@ -11,6 +11,8 @@
 
 body {
   overflow: hidden; }
+  body::-webkit-scrollbar {
+    display: none; }
 
 .overflowClass {
   overflow: auto; }
@@ -19,74 +21,79 @@ body {
   width: 100%;
   height: 300px;
   position: fixed;
-  top: -50px; }
+  top: -50px;
+  z-index: 8; }
 
 #gradient-background.sticky-gradient {
   height: 100px; }
 
-.header {
-  width: 100%;
-  height: 210px;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  z-index: 10; }
-  .header h1 {
-    color: white;
-    font-size: 5rem; }
-  .header__nav ul {
+.header-container {
+  margin-top: 40px; }
+  .header-container .header {
+    width: 100%;
+    height: 210px;
     display: flex;
-    margin-top: 70px; }
-  .header__link {
-    list-style: none;
-    padding: 0 25px 12px 25px;
-    font-size: 1.1rem; }
-  .header a {
-    color: white;
-    text-decoration: none;
-    transition: 0.4s all; }
-  .header a:hover {
-    color: black; }
-  .header i {
-    cursor: pointer;
-    font-size: 1.5rem; }
-  .header #darkButton {
-    color: white;
-    transition: 0.4s all; }
-    .header #darkButton:hover {
-      color: black; }
-  .header #lightButton {
-    display: none;
-    transition: 0.4s all; }
-    .header #lightButton:hover {
-      color: white !important; }
-  .header__buttons {
-    position: absolute;
-    right: 0;
-    display: flex; }
-    .header__buttons i {
-      margin-right: 12px; }
-    .header__buttons .media-settings {
-      display: flex;
-      flex-direction: column; }
-    .header__buttons .fa-linkedin, .header__buttons .fa-github {
+    position: fixed;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    z-index: 10; }
+    .header-container .header h1 {
       color: white;
-      transition: .4s all; }
-    .header__buttons .fa-linkedin:hover {
+      font-size: 5rem; }
+    .header-container .header__nav ul {
+      display: flex;
+      margin-top: 70px; }
+    .header-container .header__link {
+      list-style: none;
+      padding: 0 25px 12px 25px;
+      font-size: 1.1rem; }
+    .header-container .header a {
+      color: white;
+      text-decoration: none;
+      transition: 0.4s all; }
+    .header-container .header a:hover {
       color: black; }
-    .header__buttons .fa-github:hover {
-      color: black; }
-  .header__mode {
-    position: absolute;
-    left: 0;
-    display: flex; }
-    .header__mode i {
-      margin-left: 12px; }
+    .header-container .header i {
+      cursor: pointer;
+      font-size: 1.5rem; }
+    .header-container .header #darkButton {
+      color: white;
+      transition: 0.4s all; }
+      .header-container .header #darkButton:hover {
+        color: black; }
+    .header-container .header #lightButton {
+      display: none;
+      transition: 0.4s all; }
+      .header-container .header #lightButton:hover {
+        color: white !important; }
+    .header-container .header__buttons {
+      position: absolute;
+      right: 0;
+      display: flex; }
+      .header-container .header__buttons i {
+        margin-right: 12px; }
+      .header-container .header__buttons .media-settings {
+        display: flex;
+        flex-direction: column; }
+      .header-container .header__buttons .fa-linkedin,
+      .header-container .header__buttons .fa-github {
+        color: white;
+        transition: .4s all; }
+      .header-container .header__buttons .fa-linkedin:hover {
+        color: black; }
+      .header-container .header__buttons .fa-github:hover {
+        color: black; }
+    .header-container .header__mode {
+      position: absolute;
+      left: 0;
+      display: flex; }
+      .header-container .header__mode i {
+        margin-left: 12px; }
 
 .header.sticky-header {
-  height: 9px; }
+  height: 9px;
+  z-index: 10; }
   .header.sticky-header h1 {
     font-size: 0; }
 
@@ -95,7 +102,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 40px;
   padding-top: 250px; }
   .content h2 {
     font-size: 2rem;
@@ -110,31 +116,36 @@ body {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     .content__introduction__text {
       font-size: 1.1rem; }
   .content__install {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     .content__install p {
       margin-top: 10px; }
   .content__basics {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
   .content__selectors {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
   .content__methods {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     .content__methods .dimensions__desc {
       margin-bottom: 10px; }
     .content__methods .dimensions__example {
@@ -162,7 +173,8 @@ body {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     .content__events__display, .content__events__display2 {
       padding: 10px; }
       .content__events__display p, .content__events__display2 p {
@@ -211,7 +223,8 @@ body {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     .content__effects a {
       color: black; }
     .content__effects__display, .content__effects__display2 {
@@ -258,7 +271,8 @@ body {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     .content__ajax img {
       object-fit: cover;
       width: 100%;
@@ -271,7 +285,8 @@ body {
     width: 60%;
     display: flex;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     .content__ejercicios__arrow {
       display: flex;
       align-items: center;
@@ -383,12 +398,15 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-top: 50px;
     margin-top: 30px; }
     .content__plugins__desc {
       margin-top: 20px; }
     .content__plugins .swiper {
       width: 100%;
-      height: 500px; }
+      height: 500px;
+      position: relative;
+      z-index: 2; }
     .content__plugins .swiper-button-next, .content__plugins .swiper-button-prev {
       color: white; }
     .content__plugins .swiper-scrollbar-drag {
@@ -427,6 +445,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-top: 50px;
     text-align: center;
     margin-top: 30px; }
     .content__finalmessage img {
