@@ -16,6 +16,8 @@
 
     ul {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         li {
             list-style: none;
@@ -40,6 +42,7 @@
     }
 
     &__copy {
+        text-align: center;
         color: rgba(255, 255, 255, 0.778);
     }
     

@@ -72,6 +72,10 @@ body {
   display: none;
 }
 
+#btnMenu {
+  display: none;
+}
+
 .pl30 {
   padding-left: 30px;
 }
@@ -110,6 +114,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   z-index: 10;
   position: relative;
 
@@ -126,13 +131,308 @@ body {
 
 // Components
 
-.jc-bs3-container {
-  width: 80%;
+.swal2-html-container {
+  text-align: left !important;
 }
 
-.jconfirm-holder {
-  display: flex;
-  justify-content: center;
+.menu {
+  width: 45vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(0,0,0,.8);
+  border-left: 6px white solid;
+  display: none;
+  right: -550px;
 }
 
-@import "./sections/components.scss"
+.menu-border-white {
+  border-left: 6px white solid
+}
+
+.menu-border-black {
+  border-left: 6px black solid
+}
+
+
+@import "./sections/components.scss";
+
+
+
+
+// Media Querys
+
+
+@media (max-width: 1024px) {
+
+  .content {
+    padding-top: 150px;
+
+    .main-images img {
+      width: 250px;
+    }
+
+    &__exercises {
+      &__hover-game {
+        .hover-container {
+          .hover-div {
+            margin: 5;
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  .example {
+    padding: 10px;
+  }
+
+  .menu {
+    display: inline-block;
+    z-index: 15;
+    color: white;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    hr {
+      height: 4px;
+      border: 0;
+      background-color: rgb(255, 255, 255);
+    }
+
+    &__close {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0,0,0,.4);
+
+      i {
+        font-size: 2rem;
+        transition: .4s all;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    ul {
+      padding: 20px;
+
+      li {
+        list-style: none;
+        font-size: 1.2rem;
+        padding: 10px;
+        transition: 0.4s all;
+
+        &:hover {
+          padding-left: 30px;
+        }
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+
+
+    &__footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      p {
+        padding-right: 10px;
+      }
+    }
+
+    &__footer-text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(0,0,0,.4);
+    }
+
+    &__buttons {
+      display: flex;
+
+      a {
+        color: white;
+        font-size: 1.6rem;
+        padding: 7px;
+
+        &:hover {
+          color: black;
+        }
+
+        .fa-linkedin,
+        .fa-github {
+          color: white;
+          transition: .4s all;
+        
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+  }
+
+  .header-container {
+
+    #gradient-background {
+      height: 250px;
+    }
+
+    #gradient-background.sticky-gradient {
+      height: 120px;
+    }
+
+    .header {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      top: -50px;
+      z-index: 10;
+
+      &__menu {
+        display: flex;
+      }
+
+      &__mode2 {
+        display: inline-block;
+
+        #darkButton2 {
+          color: white;
+          transition: 0.4s all;
+
+          &:hover {
+            color: black;
+          }
+        }
+
+        #lightButton2 {
+          display: none;
+          transition: 0.4s all;
+
+          &:hover {
+            color: white !important;
+          }
+        }
+      }
+
+
+      &__nav {
+        display: flex;
+        flex-direction: row-reverse;
+
+        ul {
+          display: none;
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      i {
+        font-size: 2rem;
+      }
+
+      &__mode {
+        display: none;
+      }
+
+      &__buttons {
+        display: none;
+      }
+
+      #btnMenu {
+        display: inline-block;
+      }
+
+      .fa-bars {
+        color: white;
+        margin-left: 10px;
+        transition: .4s all;
+
+        &:hover {
+          color: black;
+        }
+      }
+
+    }
+
+    .header.sticky-header{
+      height: 90px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .content {
+
+    &__introduction,
+    &__install,
+    &__basics,
+    &__selectors,
+    &__methods,
+    &__events,
+    &__effects,
+    &__ajax,
+    &__exercises,
+    &__plugins,
+    &__finalmessage {
+      width: 90%;
+    }
+  }
+
+  .footer {
+    height: 250px;
+
+    ul li {
+      padding: 6px;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    &__copy {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .menu {
+    width: 100vw;
+    border-left: 0;
+  }
+
+  .menu-border-black {
+    border-left: 0;
+  }
+
+  .menu-border-white {
+    border-left: 0;
+  }
+}

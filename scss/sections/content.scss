@@ -145,6 +145,7 @@
         &__buttons {
             padding: 20px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
 
             button {
@@ -207,6 +208,7 @@
         &__buttons {
             padding: 20px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
 
             button {
@@ -237,7 +239,7 @@
         }
     }
 
-    &__ejercicios {
+    &__exercises {
         @include content-container;
 
         &__arrow {

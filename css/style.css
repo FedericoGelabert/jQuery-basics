@@ -27,73 +27,76 @@ body {
 #gradient-background.sticky-gradient {
   height: 100px; }
 
-.header-container {
+.header-container .header {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  z-index: 20;
   margin-top: 40px; }
-  .header-container .header {
-    width: 100%;
-    height: 210px;
+  .header-container .header h1 {
+    color: white;
+    font-size: 5rem; }
+  .header-container .header__mode2 {
+    display: none; }
+  .header-container .header__nav ul {
     display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    z-index: 10; }
-    .header-container .header h1 {
-      color: white;
-      font-size: 5rem; }
-    .header-container .header__nav ul {
-      display: flex;
-      margin-top: 70px; }
-    .header-container .header__link {
-      list-style: none;
-      padding: 0 25px 12px 25px;
-      font-size: 1.1rem; }
-    .header-container .header a {
-      color: white;
-      text-decoration: none;
-      transition: 0.4s all; }
-    .header-container .header a:hover {
+    margin-top: 70px; }
+  .header-container .header__link {
+    list-style: none;
+    padding: 0 25px 12px 25px;
+    font-size: 1.1rem; }
+  .header-container .header a {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s all; }
+  .header-container .header a:hover {
+    color: black; }
+  .header-container .header i {
+    cursor: pointer;
+    font-size: 1.5rem; }
+  .header-container .header #darkButton {
+    color: white;
+    transition: 0.4s all; }
+    .header-container .header #darkButton:hover {
       color: black; }
-    .header-container .header i {
-      cursor: pointer;
-      font-size: 1.5rem; }
-    .header-container .header #darkButton {
+  .header-container .header #btnMenu {
+    transition: 0.4s all; }
+  .header-container .header #lightButton {
+    display: none;
+    transition: 0.4s all; }
+    .header-container .header #lightButton:hover {
+      color: white !important; }
+  .header-container .header__buttons {
+    position: absolute;
+    right: 0;
+    display: flex; }
+    .header-container .header__buttons i {
+      margin-right: 12px; }
+    .header-container .header__buttons .media-settings {
+      display: flex;
+      flex-direction: column; }
+    .header-container .header__buttons .fa-linkedin,
+    .header-container .header__buttons .fa-github {
       color: white;
-      transition: 0.4s all; }
-      .header-container .header #darkButton:hover {
-        color: black; }
-    .header-container .header #lightButton {
-      display: none;
-      transition: 0.4s all; }
-      .header-container .header #lightButton:hover {
-        color: white !important; }
-    .header-container .header__buttons {
-      position: absolute;
-      right: 0;
-      display: flex; }
-      .header-container .header__buttons i {
-        margin-right: 12px; }
-      .header-container .header__buttons .media-settings {
-        display: flex;
-        flex-direction: column; }
-      .header-container .header__buttons .fa-linkedin,
-      .header-container .header__buttons .fa-github {
-        color: white;
-        transition: .4s all; }
-      .header-container .header__buttons .fa-linkedin:hover {
-        color: black; }
-      .header-container .header__buttons .fa-github:hover {
-        color: black; }
-    .header-container .header__mode {
-      position: absolute;
-      left: 0;
-      display: flex; }
-      .header-container .header__mode i {
-        margin-left: 12px; }
+      transition: .4s all; }
+    .header-container .header__buttons .fa-linkedin:hover {
+      color: black; }
+    .header-container .header__buttons .fa-github:hover {
+      color: black; }
+  .header-container .header__mode {
+    position: absolute;
+    left: 0;
+    display: flex; }
+    .header-container .header__mode i {
+      margin-left: 12px; }
 
 .header.sticky-header {
   height: 9px;
-  z-index: 10; }
+  z-index: 15; }
   .header.sticky-header h1 {
     font-size: 0; }
 
@@ -212,6 +215,7 @@ body {
     .content__events__buttons {
       padding: 20px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center; }
       .content__events__buttons button {
         background-color: rgba(115, 115, 115, 0.047);
@@ -260,6 +264,7 @@ body {
     .content__effects__buttons {
       padding: 20px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center; }
       .content__effects__buttons button {
         background-color: rgba(115, 115, 115, 0.047);
@@ -281,36 +286,36 @@ body {
       font-size: 1.4rem; }
     .content__ajax__desc {
       margin-top: 20px; }
-  .content__ejercicios {
+  .content__exercises {
     width: 60%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding-top: 50px; }
-    .content__ejercicios__arrow {
+    .content__exercises__arrow {
       display: flex;
       align-items: center;
       flex-direction: column; }
-      .content__ejercicios__arrow .arrowContainer {
+      .content__exercises__arrow .arrowContainer {
         width: 90%;
         font-size: 20px;
         height: 150px;
         text-align: center; }
-        .content__ejercicios__arrow .arrowContainer div {
+        .content__exercises__arrow .arrowContainer div {
           display: none;
           background-color: rgba(128, 128, 128, 0.214);
           height: 100%; }
-          .content__ejercicios__arrow .arrowContainer div p {
+          .content__exercises__arrow .arrowContainer div p {
             padding-top: 75px;
             font-size: 1.1rem; }
-      .content__ejercicios__arrow .arrowDownUp {
+      .content__exercises__arrow .arrowDownUp {
         padding: 20px; }
-        .content__ejercicios__arrow .arrowDownUp .arrowDown {
+        .content__exercises__arrow .arrowDownUp .arrowDown {
           width: 80px; }
-        .content__ejercicios__arrow .arrowDownUp .arrowUp {
+        .content__exercises__arrow .arrowDownUp .arrowUp {
           width: 80px;
           display: none; }
-    .content__ejercicios__used {
+    .content__exercises__used {
       background-color: rgba(128, 128, 128, 0.214);
       display: flex;
       align-items: center;
@@ -318,17 +323,17 @@ body {
       margin-top: 10px;
       padding: 20px;
       text-align: center; }
-    .content__ejercicios__buttons {
+    .content__exercises__buttons {
       display: flex;
       justify-content: center; }
-      .content__ejercicios__buttons button {
+      .content__exercises__buttons button {
         width: 30%;
         background-color: rgba(115, 115, 115, 0.047);
         color: black;
         padding: 8px;
         margin: 5px;
         cursor: pointer; }
-    .content__ejercicios #form {
+    .content__exercises #form {
       background-color: rgba(128, 128, 128, 0.214);
       display: flex;
       align-items: center;
@@ -336,13 +341,13 @@ body {
       margin-top: 10px;
       width: 100%;
       height: 300px; }
-      .content__ejercicios #form form input {
+      .content__exercises #form form input {
         padding: 8px; }
-      .content__ejercicios #form form p {
+      .content__exercises #form form p {
         margin: 5px; }
-      .content__ejercicios #form form span {
+      .content__exercises #form form span {
         margin: 5px; }
-    .content__ejercicios__onOff #onOffCaja {
+    .content__exercises__onOff #onOffCaja {
       background-color: rgba(128, 128, 128, 0.214);
       display: flex;
       align-items: center;
@@ -350,11 +355,11 @@ body {
       margin-top: 10px;
       width: 100%;
       height: 300px; }
-      .content__ejercicios__onOff #onOffCaja div {
+      .content__exercises__onOff #onOffCaja div {
         width: 170px;
         height: 60%;
         background-color: red; }
-    .content__ejercicios__hover-game {
+    .content__exercises__hover-game {
       background-color: rgba(128, 128, 128, 0.214);
       display: flex;
       align-items: center;
@@ -363,9 +368,9 @@ body {
       width: 100%;
       height: 200px;
       flex-direction: column; }
-      .content__ejercicios__hover-game .hover-container {
+      .content__exercises__hover-game .hover-container {
         display: flex; }
-        .content__ejercicios__hover-game .hover-container .hover-div {
+        .content__exercises__hover-game .hover-container .hover-div {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -373,9 +378,9 @@ body {
           height: 50px;
           background-color: black;
           margin: 10px; }
-      .content__ejercicios__hover-game .hover-results {
+      .content__exercises__hover-game .hover-results {
         padding-top: 30px; }
-    .content__ejercicios__images {
+    .content__exercises__images {
       background-color: rgba(128, 128, 128, 0.214);
       display: flex;
       align-items: center;
@@ -384,11 +389,11 @@ body {
       width: 100%;
       height: 400px;
       flex-direction: column; }
-      .content__ejercicios__images .main-images img {
+      .content__exercises__images .main-images img {
         width: 350px;
         height: 95%;
         object-fit: cover; }
-      .content__ejercicios__images .other-images img {
+      .content__exercises__images .other-images img {
         margin-top: 15px;
         width: 80px;
         height: 80%;
@@ -476,7 +481,9 @@ body {
   .footer h3 {
     font-size: 3rem; }
   .footer ul {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
     .footer ul li {
       list-style: none;
       padding: 10px; }
@@ -489,6 +496,7 @@ body {
     font-size: 1.6rem;
     margin: 3px; }
   .footer__copy {
+    text-align: center;
     color: rgba(255, 255, 255, 0.778); }
 
 .redText {
@@ -521,6 +529,9 @@ body {
 .displayNone {
   display: none; }
 
+#btnMenu {
+  display: none; }
+
 .pl30 {
   padding-left: 30px; }
 
@@ -550,6 +561,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   z-index: 10;
   position: relative; }
   #preloader h2 {
@@ -557,12 +569,25 @@ body {
   #preloader img {
     width: 300px; }
 
-.jc-bs3-container {
-  width: 80%; }
+.swal2-html-container {
+  text-align: left !important; }
 
-.jconfirm-holder {
-  display: flex;
-  justify-content: center; }
+.menu {
+  width: 45vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-left: 6px white solid;
+  display: none;
+  right: -550px; }
+
+.menu-border-white {
+  border-left: 6px white solid; }
+
+.menu-border-black {
+  border-left: 6px black solid; }
 
 .callout {
   background-color: rgba(128, 128, 128, 0.214);
@@ -595,3 +620,149 @@ body {
   color: orange;
   text-shadow: 1px 0px 1px black;
   font-size: 1.2rem; }
+
+@media (max-width: 1024px) {
+  .content {
+    padding-top: 150px; }
+    .content .main-images img {
+      width: 250px; }
+    .content__exercises__hover-game .hover-container .hover-div {
+      margin: 5;
+      width: 35px;
+      height: 35px; }
+  .example {
+    padding: 10px; }
+  .menu {
+    display: inline-block;
+    z-index: 15;
+    color: white; }
+    .menu h3 {
+      font-size: 2rem; }
+    .menu hr {
+      height: 4px;
+      border: 0;
+      background-color: white; }
+    .menu__close {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.4); }
+      .menu__close i {
+        font-size: 2rem;
+        transition: .4s all;
+        cursor: pointer; }
+        .menu__close i:hover {
+          color: black; }
+    .menu ul {
+      padding: 20px; }
+      .menu ul li {
+        list-style: none;
+        font-size: 1.2rem;
+        padding: 10px;
+        transition: 0.4s all; }
+        .menu ul li:hover {
+          padding-left: 30px; }
+      .menu ul a {
+        color: white;
+        text-decoration: none; }
+    .menu__footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%; }
+      .menu__footer p {
+        padding-right: 10px; }
+    .menu__footer-text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.4); }
+    .menu__buttons {
+      display: flex; }
+      .menu__buttons a {
+        color: white;
+        font-size: 1.6rem;
+        padding: 7px; }
+        .menu__buttons a:hover {
+          color: black; }
+        .menu__buttons a .fa-linkedin,
+        .menu__buttons a .fa-github {
+          color: white;
+          transition: .4s all; }
+          .menu__buttons a .fa-linkedin:hover,
+          .menu__buttons a .fa-github:hover {
+            transform: scale(1.2); }
+  .header-container #gradient-background {
+    height: 250px; }
+  .header-container #gradient-background.sticky-gradient {
+    height: 120px; }
+  .header-container .header {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: -50px;
+    z-index: 10; }
+    .header-container .header__menu {
+      display: flex; }
+    .header-container .header__mode2 {
+      display: inline-block; }
+      .header-container .header__mode2 #darkButton2 {
+        color: white;
+        transition: 0.4s all; }
+        .header-container .header__mode2 #darkButton2:hover {
+          color: black; }
+      .header-container .header__mode2 #lightButton2 {
+        display: none;
+        transition: 0.4s all; }
+        .header-container .header__mode2 #lightButton2:hover {
+          color: white !important; }
+    .header-container .header__nav {
+      display: flex;
+      flex-direction: row-reverse; }
+      .header-container .header__nav ul {
+        display: none; }
+    .header-container .header h1 {
+      font-size: 2rem; }
+    .header-container .header i {
+      font-size: 2rem; }
+    .header-container .header__mode {
+      display: none; }
+    .header-container .header__buttons {
+      display: none; }
+    .header-container .header #btnMenu {
+      display: inline-block; }
+    .header-container .header .fa-bars {
+      color: white;
+      margin-left: 10px;
+      transition: .4s all; }
+      .header-container .header .fa-bars:hover {
+        color: black; }
+  .header-container .header.sticky-header {
+    height: 90px; } }
+
+@media (max-width: 850px) {
+  .content__introduction, .content__install, .content__basics, .content__selectors, .content__methods, .content__events, .content__effects, .content__ajax, .content__exercises, .content__plugins, .content__finalmessage {
+    width: 90%; }
+  .footer {
+    height: 250px; }
+    .footer ul li {
+      padding: 6px; }
+    .footer h3 {
+      font-size: 2.5rem; }
+    .footer__copy {
+      margin-top: 10px; } }
+
+@media (max-width: 768px) {
+  .menu {
+    width: 70vw; } }
+
+@media (max-width: 425px) {
+  .menu {
+    width: 100vw;
+    border-left: 0; }
+  .menu-border-black {
+    border-left: 0; }
+  .menu-border-white {
+    border-left: 0; } }

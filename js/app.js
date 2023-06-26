@@ -18,6 +18,18 @@ jQuery(function () {
     })
 
 
+    $('#btnMenu').on('click', function(){
+        $('.menu').animate({'right':'0'},1000)
+    })
+
+    $('#btnClose').on('click', function(){
+        $('.menu').animate({'right':'-550px'},1000)
+    })
+
+    $('.menu ul li').on('click', function(){
+        $('.menu').css('right', '-550px')
+    })
+
 
     $('#darkButton').on('click', function(){
         $(this).hide()
@@ -25,13 +37,35 @@ jQuery(function () {
         $('body').css({'color': 'white', 'background-color': 'black'})
         $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-light_r1eqa9.png');
         $('hr, .is-selected').css('background-color', 'white')
-        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin").css('color','black')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars").css('color','black')
         $('.footer__copy').css('color', 'rgba(0,0,0,0.5)')
         $('.github-message-icon').css('color', 'white')
         $('.content button').css({'color': 'white', 'background-color': 'black', 'border': '2px solid white'})
         $('.dot').css('background-color', 'rgba(255, 255, 255, .8)')
 
-        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin').hover(function(e){
+        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
+            $(this).css('color', e.type === 'mouseenter'?'white':'black')
+        })
+    })
+
+    $('#darkButton2').on('click', function(){
+        $(this).hide()
+        $('#lightButton2').show()
+        $('body').css({'color': 'white', 'background-color': 'black'})
+        $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-light_r1eqa9.png');
+        $('hr, .is-selected').css('background-color', 'white')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars, .menu__buttons a .fa-github, .menu__buttons a .fa-linkedin").css('color','black')
+        $('.footer__copy').css('color', 'rgba(0,0,0,0.5)')
+        $('.github-message-icon').css('color', 'white')
+        $('.content button').css({'color': 'white', 'background-color': 'black', 'border': '2px solid white'})
+        $('.dot').css('background-color', 'rgba(255, 255, 255, .8)')
+        $('.menu').css({'background-color': 'rgba(255, 255, 255, .8)', 'color': 'black'}).addClass('menu-border-black').removeClass('menu-border-white')
+        $('.menu hr').css('background-color', 'black')
+        $('.menu ul a, .menu__buttons a').css('color', 'black')
+        $('.menu__footer-text, .menu__close').css('background-color', 'rgba(255, 255, 255, 0.4)')
+
+
+        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
             $(this).css('color', e.type === 'mouseenter'?'white':'black')
         })
     })
@@ -42,13 +76,34 @@ jQuery(function () {
         $('body').css({'color': 'black', 'background-color': 'white'})
         $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-black_mmrguf.png');
         $('hr, .is-selected').css('background-color', 'black')
-        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin").css('color','white')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars").css('color','white')
         $('.footer__copy').css('color', 'rgba(255, 255, 255, .6)')
         $('.github-message-icon').css('color', 'black')
         $('.content button').css({'color': 'black', 'background-color': 'white', 'border': '2px solid black'})
         $('.dot').css('background-color', 'rgba(0, 0, 0, .8)')
 
-        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin').hover(function(e){
+        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
+            $(this).css('color', e.type === 'mouseenter'?'black':'white')
+        })
+    })
+
+    $('#lightButton2').on('click', function(){
+        $(this).hide()
+        $('#darkButton2').show()
+        $('body').css({'color': 'black', 'background-color': 'white'})
+        $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-black_mmrguf.png');
+        $('hr, .is-selected').css('background-color', 'black')
+        $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars, .menu__buttons a .fa-github, .menu__buttons a .fa-linkedin").css('color','white')
+        $('.footer__copy').css('color', 'rgba(255, 255, 255, .6)')
+        $('.github-message-icon').css('color', 'black')
+        $('.content button').css({'color': 'black', 'background-color': 'white', 'border': '2px solid black'})
+        $('.dot').css('background-color', 'rgba(0, 0, 0, .8)')
+        $('.menu').css({'background-color': 'rgba(0, 0, 0, .8)', 'color': 'white'}).addClass('menu-border-white').removeClass('menu-border-black')
+        $('.menu hr').css('background-color', 'white')
+        $('.menu ul a, .menu__buttons a').css('color', 'white')
+        $('.menu__footer-text, .menu__close').css('background-color', 'rgba(0, 0, 0, 0.4)')
+
+        $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
             $(this).css('color', e.type === 'mouseenter'?'black':'white')
         })
     })
@@ -99,21 +154,21 @@ jQuery(function () {
         let boxOuterWidthTrue = $('.dimensions__box').outerWidth(true)
         let boxOuterHeightTrue = $('.dimensions__box').outerHeight(true)
 
-        $.alert({
+        Swal.fire({
             title: '<span class="redText" style="text-decoration:underline;">Dimensiones</span>',
-            content: `
-                <div class="codeBlack">
-                Width: ${boxWidth} <br> 
-                Height: ${boxHeight} <br> 
-                Width + padding: ${boxInnerWidth} <br>
-                Height + padding: ${boxInnerHeight} <br>
-                Width + padding + border: ${boxOuterWidth} <br>
-                Height + padding + border: ${boxOuterHeight} <br>
-                Width + padding + border + margin: ${boxOuterWidthTrue} <br>
-                Height + padding + border + margin: ${boxOuterHeightTrue} 
-                </div>
-            `,
-        });
+            html: `
+            <div class="codeBlack">
+            Width: ${boxWidth}. <br> 
+            Height: ${boxHeight}. <br> 
+            Width + padding: ${boxInnerWidth}. <br>
+            Height + padding: ${boxInnerHeight}. <br>
+            Width + padding + border: ${boxOuterWidth}. <br>
+            Height + padding + border: ${boxOuterHeight}. <br>
+            Width + padding + border + margin: ${boxOuterWidthTrue}. <br>
+            Height + padding + border + margin: ${boxOuterHeightTrue}.
+            </div>
+        `
+          })
     })
 
     $('#inputConfirmPassword').focusout(function () {
@@ -284,9 +339,9 @@ jQuery(function () {
     })
 
     $('#btnHTMLFirstExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código HTML:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
                 &lt;div class="container"&gt;
@@ -301,14 +356,14 @@ jQuery(function () {
                     &lt;/div&gt;
                 &lt;/div&gt;
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnSCSSFirstExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código SCSS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             .container{
@@ -348,14 +403,14 @@ jQuery(function () {
                 }
             }
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnJSFirstExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código JS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             $('#flechaAbajo').on('click', function () {
@@ -372,14 +427,14 @@ jQuery(function () {
                 }
             })
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnHTMLSecondExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código HTML:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
                 &lt;div id="form"&gt;
@@ -387,22 +442,22 @@ jQuery(function () {
                         &lt;h2&gt;Registrate&lt;/h2&gt;
                         &lt;p&gt;Name: &lt;input type="text" placeholder="Name" id="inputName"&gt;&lt;/p&gt;
                         &lt;p&gt;Email: &lt;input type="email" placeholder="Email" id="inputEmail"&gt;&lt;/p&gt;
-                        &lt;p&gt;Password: &lt;input type="password" placeholder="Password" id="inputPassword"&gt;&lt;span id="max"&gt;(Máximo 8
-                            caracteres)&lt;/span&gt;&lt;/p&gt;
-                        &lt;p&gt;Confirm password: &lt;input type="password" placeholder="Confirm password" id="inputConfirmPassword"&gt;&lt;span
-                            id="confirmPassword"&gt;&lt;/span&gt;&lt;/p&gt;
+                        &lt;p&gt;Password: &lt;input type="password" placeholder="Password" id="inputPassword"&gt;
+                        &lt;span id="max"&gt;(Máximo 8 caracteres)&lt;/span&gt;&lt;/p&gt;
+                        &lt;p&gt;Confirm password: &lt;input type="password" placeholder="Confirm password" id="inputConfirmPassword"&gt;
+                        &lt;span id="confirmPassword"&gt;&lt;/span&gt;&lt;/p&gt;
                         &lt;p&gt;&lt;input type="submit" placeholder="Name" value="Submit" id="inputSubmit"&gt;&lt;/p&gt;
                     &lt;/form&gt;
                 &lt;/div&gt;
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnJSSecondExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código JS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             $('form').on('submit', function (e) {
@@ -419,14 +474,20 @@ jQuery(function () {
         
             $('#inputPassword').focusout(function () {
                 if ($(this).val().length > 0 && $(this).val().length <= 3) {
-                    $('#max').html("<strong style='color: red;'>Contraseña muy corta.</strong>")
+                    $('#max').html(
+                        "<strong style='color: red;'>Contraseña muy corta.</strong>"
+                        )
                 }
         
                 else if ($(this).val().length > 3 && $(this).val().length <= 8) {
-                    $('#max').html("<strong style='color: green;'>Contraseña válida.</strong>")
+                    $('#max').html(
+                        "<strong style='color: green;'>Contraseña válida.</strong>"
+                        )
                 }
                 else if ($(this).val().length > 8) {
-                    $('#max').html("<strong style='color: red;'>Contraseña muy larga.</strong>")
+                    $('#max').html(
+                        "<strong style='color: red;'>Contraseña muy larga.</strong>"
+                        )
                 }
             })
         
@@ -440,14 +501,14 @@ jQuery(function () {
             })
         
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnHTMLThirdExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código HTML:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
                 &lt;div class="container"&gt;
@@ -461,14 +522,14 @@ jQuery(function () {
                     &lt;/div&gt;
                 &lt;/div&gt;
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnSCSSThirdExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código SCSS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             .container {
@@ -488,7 +549,7 @@ jQuery(function () {
                     }
                 }
             }
-
+    
             .selected-button {
                 border: green solid 3px;
                 background-color: greenyellow;
@@ -499,14 +560,14 @@ jQuery(function () {
                 background-color: #f17777;
               }
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnJSThirdExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código JS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             function slideToggleFn() {
@@ -514,22 +575,26 @@ jQuery(function () {
             }
             
             $("#btnOn").on('click', function(){
-                $("#btn").on("click").addClass("selected-button").removeClass("unselected-button").text("Botón activado")
+                $("#btn").on("click").addClass("selected-button")
+                .removeClass("unselected-button")
+                .text("Botón activado")
                 $("#btn").on('click', slideToggleFn)
             })
             
             $("#btnOff").on('click', function () {
-                $("#btn").off("click").removeClass("selected-button").addClass("unselected-button").text("Botón desactivado")
+                $("#btn").off("click").removeClass("selected-button")
+                .addClass("unselected-button")
+                .text("Botón desactivado")
             })
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnHTMLFourthExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código HTML:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
                 &lt;div class="container"&gt;
@@ -541,23 +606,24 @@ jQuery(function () {
                         &lt;div class="hover-div"&gt;5&lt;/div&gt;
                     &lt;/div&gt;
                     &lt;div&gt;
-                        &lt;p class="hover-results"&gt;Resultado: &lt;strong&gt;Pending&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p class="hover-results"&gt;Resultado: 
+                        &lt;strong&gt;Pending&lt;/strong&gt;&lt;/p&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnSCSSFourthExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código SCSS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             .hover-container {
                 display: flex;
-
+    
                 .hover-div {
                     display: flex;
                     align-items: center;
@@ -568,40 +634,42 @@ jQuery(function () {
                     margin: 10px;
                 }
             }
-
+    
             .hover-results {
                 padding-top: 30px;
             }
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnJSFourthExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código JS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             let parent = $('.hover-container')
             let divs = parent.children()
-            parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0])
-
+            parent.append(divs.splice(
+                Math.floor(Math.random() * divs.length), 1)[0])
+    
             $('.hover-div').hover(function () {
                 if ($(this).text() === "3") {
-                    $('.hover-results strong').text("¡Has Ganado!")
+                    $('.hover-results strong')
+                    .text("¡Has Ganado!")
                 }
                 $(this).css('color', 'white')
             })
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnHTMLFifthExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código HTML:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código HTML:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
                 &lt;div class="container"&gt;
@@ -617,14 +685,14 @@ jQuery(function () {
                     &lt;/div&gt;
                 &lt;/div&gt;
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnSCSSFifthExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código SCSS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código SCSS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             .main-images img {
@@ -639,19 +707,19 @@ jQuery(function () {
                 height: 80%;
                 display: inline-block;
             }
-
+    
             .selected-img {
                 border: 3px solid red;
               }
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
     $('#btnJSFifthExercise').on('click', function () {
-        $.alert({
-            title: '<span class="redText" style="text-decoration:underline;">Código JS:</span>',
-            content: `
+        Swal.fire({
+            title: '<span class="redText">Código JS:</span>',
+            html: `
             <pre>
             <code class="code codeBlack">
             let allImages = $('.other-images img')
@@ -663,11 +731,12 @@ jQuery(function () {
                 allImages.removeClass('selected-img')
                 $(this).addClass('selected-img')
             
-                $('.main-images img').eq(indice).show().siblings().hide()
+                $('.main-images img').eq(indice)
+                .show().siblings().hide()
             })
             </code>
-            </pre>`,
-        });
+            </pre>`
+          })
     })
 
 })
