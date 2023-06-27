@@ -14,11 +14,9 @@ https://jquery-basics.netlify.app/
 ### Installation
 
 ```
-git clone https://github.com/FedericoGelabert/Project-ReactJS.git
+git clone https://github.com/FedericoGelabert/jQuery-basics.git
 
 npm install
-
-npm start
 ```
 
 ### Contact
