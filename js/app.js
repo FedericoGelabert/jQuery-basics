@@ -17,7 +17,6 @@ jQuery(function () {
         $('.content').toggleClass('content-padding', window.scrollY > 0)
     })
 
-
     $('#btnMenu').on('click', function(){
         $('.menu').animate({'right':'0'},1000)
     })
@@ -29,7 +28,6 @@ jQuery(function () {
     $('.menu ul li').on('click', function(){
         $('.menu').css('right', '-550px')
     })
-
 
     $('#darkButton').on('click', function(){
         $(this).hide()
@@ -108,11 +106,6 @@ jQuery(function () {
         })
     })
 
-    $('#settingsButton').on('click', function(){
-        $('.media-menu').fadeToggle(400)
-    })
-
-
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
         loop: true,
@@ -126,6 +119,10 @@ jQuery(function () {
           el: '.swiper-scrollbar',
         },
       });
+
+    $('#settingsButton').on('click', function(){
+        $('.media-menu').fadeToggle(400)
+    })
 
     $('#date1').daterangepicker({
         locale: {
