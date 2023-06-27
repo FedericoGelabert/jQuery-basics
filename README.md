@@ -9,7 +9,7 @@ https://jquery-basics.netlify.app/
 
 ### GIF
 
-![jquery-basics GIF](https://res.cloudinary.com/federicog/image/upload/v1687827339/jquery-basics/jquery-basics_klxqol.gif)
+![jquery-basics GIF](https://res.cloudinary.com/federicog/image/upload/v1687828119/jquery-basics/jquery-basics1_thveik.gif)
 
 ### Installation
 
