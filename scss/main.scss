@@ -384,6 +384,12 @@ body {
 @media (max-width: 850px) {
   .content {
 
+    &__introduction {
+      img {
+        height: 200px;
+      }
+    }
+
     &__introduction,
     &__install,
     &__basics,

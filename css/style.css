@@ -123,6 +123,10 @@ body {
     padding-top: 50px; }
     .content__introduction__text {
       font-size: 1.1rem; }
+    .content__introduction img {
+      object-fit: contain;
+      width: 100%;
+      height: 400px; }
   .content__install {
     width: 60%;
     display: flex;
@@ -743,6 +747,8 @@ body {
     height: 90px; } }
 
 @media (max-width: 850px) {
+  .content__introduction img {
+    height: 200px; }
   .content__introduction, .content__install, .content__basics, .content__selectors, .content__methods, .content__events, .content__effects, .content__ajax, .content__exercises, .content__plugins, .content__finalmessage {
     width: 90%; }
   .footer {
