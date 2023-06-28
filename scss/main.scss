@@ -30,6 +30,11 @@ body {
 @import "./sections/content.scss";
 @import "./sections/footer.scss";
 
+// Helper
+
+@import "./helper/components.scss";
+@import "./helper/animations.scss";
+
 // Colors
 
 .redText {
@@ -156,13 +161,7 @@ body {
 }
 
 
-@import "./sections/components.scss";
-
-
-
-
 // Media Querys
-
 
 @media (max-width: 1024px) {
 
@@ -296,7 +295,7 @@ body {
     }
 
     #gradient-background.sticky-gradient {
-      height: 120px;
+      animation: gradient-res-b 0.2s forwards;
     }
 
     .header {
@@ -376,7 +375,7 @@ body {
     }
 
     .header.sticky-header{
-      height: 90px;
+      animation: header-res-b 0.2s forwards;
     }
   }
 }

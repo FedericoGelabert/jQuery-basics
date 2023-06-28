@@ -8,6 +8,7 @@
 
 #gradient-background.sticky-gradient {
     height: 100px;
+    animation: gradient-transition 0.2s;
 }
 
 .header-container {
@@ -123,7 +124,7 @@
 }
 
 .header.sticky-header {
-    height: 9px;
+    animation: header-transition 0.2s forwards;
     z-index: 15;
 
     h1 {
