@@ -7,9 +7,23 @@
 
 https://jquery-basics.netlify.app/
 
+### Exercises:
+
+- [View code](https://github.com/FedericoGelabert/jQuery-basics/blob/main/src/components/content/Exercises.jsx)
+
+
 ### GIF
 
 ![jquery-basics GIF](https://res.cloudinary.com/federicog/image/upload/v1687828119/jquery-basics/jquery-basics1_thveik.gif)
+
+
+### Dependencies
+
+- jquery
+- sass
+- sweetalert2
+- swiper
+- fancyapps/ui
 
 ### Installation
 
@@ -17,6 +31,8 @@ https://jquery-basics.netlify.app/
 git clone https://github.com/FedericoGelabert/jQuery-basics.git
 
 npm install
+
+npm start
 ```
 
 ### Contact
