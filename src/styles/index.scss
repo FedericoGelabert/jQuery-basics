@@ -295,7 +295,9 @@ body {
     }
 
     #gradient-background.sticky-gradient {
-      animation: gradient-res-b 0.2s forwards;
+      animation: gradient-res-b 0.2s forwards, gradient-background 35s ease infinite;
+      background: linear-gradient(270deg, #f70909, #f39006, #eff306, #52f306, #06daf3, #0667f3, #9f06f3, #f30657);
+      background-size: 1600% 1600%;
     }
 
     .header {

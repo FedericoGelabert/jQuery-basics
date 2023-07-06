@@ -4,11 +4,16 @@
     position: fixed;
     top: -50px;
     z-index: 8;
+    background: linear-gradient(270deg, #f70909, #f39006, #eff306, #52f306, #06daf3, #0667f3, #9f06f3, #f30657);
+    background-size: 1600% 1600%;
+    animation: gradient-background 35s ease infinite;
 }
 
 #gradient-background.sticky-gradient {
     height: 100px;
-    animation: gradient-transition 0.2s;
+    animation: gradient-transition 0.2s, gradient-background 35s ease infinite;
+    background: linear-gradient(270deg, #f70909, #f39006, #eff306, #52f306, #06daf3, #0667f3, #9f06f3, #f30657);
+    background-size: 1600% 1600%;
 }
 
 .header-container {
