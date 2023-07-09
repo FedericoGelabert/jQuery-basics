@@ -10,7 +10,7 @@ function Header() {
             $('#lightButton').show()
             $('body').css({'color': 'white', 'background-color': 'black'})
             $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-light_r1eqa9.png');
-            $('hr, .is-selected').css('background-color', 'white')
+            $('hr, .is-selected, .hover-div').css('background-color', 'white')
             $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars").css('color','black')
             $('.footer__copy').css('color', 'rgba(0,0,0,0.5)')
             $('.github-message-icon').css('color', 'white')
@@ -20,6 +20,10 @@ function Header() {
             $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
                 $(this).css('color', e.type === 'mouseenter'?'white':'black')
             })
+
+            $('.hover-div').hover(function(){
+                $(this).css('color', 'black')
+            })
         })
     
         $('#darkButton2').on('click', function(){
@@ -27,7 +31,7 @@ function Header() {
             $('#lightButton2').show()
             $('body').css({'color': 'white', 'background-color': 'black'})
             $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-light_r1eqa9.png');
-            $('hr, .is-selected').css('background-color', 'white')
+            $('hr, .is-selected, .hover-div').css('background-color', 'white')
             $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars, .menu__buttons a .fa-github, .menu__buttons a .fa-linkedin").css('color','black')
             $('.footer__copy').css('color', 'rgba(0,0,0,0.5)')
             $('.github-message-icon').css('color', 'white')
@@ -38,9 +42,12 @@ function Header() {
             $('.menu ul a, .menu__buttons a').css('color', 'black')
             $('.menu__footer-text, .menu__close').css('background-color', 'rgba(255, 255, 255, 0.4)')
     
-    
             $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
                 $(this).css('color', e.type === 'mouseenter'?'white':'black')
+            })
+
+            $('.hover-div').hover(function(){
+                $(this).css('color', 'black')
             })
         })
     
@@ -49,7 +56,7 @@ function Header() {
             $('#darkButton').show()
             $('body').css({'color': 'black', 'background-color': 'white'})
             $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-black_mmrguf.png');
-            $('hr, .is-selected').css('background-color', 'black')
+            $('hr, .is-selected, .hover-div').css('background-color', 'black')
             $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars").css('color','white')
             $('.footer__copy').css('color', 'rgba(255, 255, 255, .6)')
             $('.github-message-icon').css('color', 'black')
@@ -59,6 +66,10 @@ function Header() {
             $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
                 $(this).css('color', e.type === 'mouseenter'?'black':'white')
             })
+
+            $('.hover-div').hover(function(){
+                $(this).css('color', 'white')
+            })
         })
     
         $('#lightButton2').on('click', function(){
@@ -66,7 +77,7 @@ function Header() {
             $('#darkButton2').show()
             $('body').css({'color': 'black', 'background-color': 'white'})
             $('.jquery-logo').attr('src', 'https://res.cloudinary.com/federicog/image/upload/v1687562688/jquery-basics/jquery-logo-black_mmrguf.png');
-            $('hr, .is-selected').css('background-color', 'black')
+            $('hr, .is-selected, .hover-div').css('background-color', 'black')
             $(".header a, h1, .fa-sun, .footer a, .footer h3, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars, .menu__buttons a .fa-github, .menu__buttons a .fa-linkedin").css('color','white')
             $('.footer__copy').css('color', 'rgba(255, 255, 255, .6)')
             $('.github-message-icon').css('color', 'black')
@@ -79,6 +90,10 @@ function Header() {
     
             $('.header a, .footer a, .header__buttons .fa-github, .header__buttons .fa-linkedin, .fa-bars').hover(function(e){
                 $(this).css('color', e.type === 'mouseenter'?'black':'white')
+            })
+
+            $('.hover-div').hover(function(){
+                $(this).css('color', 'white')
             })
         })
     })
